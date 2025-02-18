@@ -1,0 +1,411 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #243C00;
+    padding: 5px 240px;
+}
+
+.navbar .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul li {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+ul .active li {
+    display: inline-block;
+}
+
+.menu {
+    margin-top: 20px;
+    width: 50px;
+    height: 60px;
+    display: none;
+}
+
+header {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-container {
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+}
+
+.carousel-title1 {
+    font-size: 70px;
+    margin-bottom: 200px;
+}
+
+.carousel-title2 {
+    font-size: 70px;
+    margin-bottom: 200px;
+}
+
+.carousel-title3 {
+    font-size: 70px;
+    margin-bottom: 200px;
+}
+
+.carousel-button {
+    background-color: #D94929;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.8s;
+}
+
+.carousel-button:hover {
+    background-color: #fff;
+    color: #D94929;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #fff;
+}
+
+
+/* Puntos de venta */ 
+
+.venta{
+    padding-top: 60px;
+    font-size: 36px;
+    text-align: center;
+}
+
+.puntosventa-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fotos-puntosventa {
+    padding-top: 130px;
+    display: flex;
+    gap: 85px;
+    flex-wrap: wrap;
+}
+
+.fotos-venta {
+    flex: 1 1 auto;
+    max-width: 150px;
+    text-align: center; 
+}
+
+.fotos-venta img {
+    width: 100%; 
+    height: auto;
+}
+
+
+/* foto de banner chiquita */
+
+.container-frutas {
+    margin-top: 300px;
+    max-width: 1920px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.foto-chiquita {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.foto-chiquita img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.texto-sobre-foto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; 
+    width: 1000px;
+}
+
+h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 25px;
+}
+
+.info-tour{
+    padding-top: 80px;
+}
+
+.infotour-button{
+    background-color: #D94929;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.8s;
+}
+
+.infotour-button:hover {
+    background-color: #fff;
+    color: #D94929;
+}
+
+
+
+ /* Productos estrella */
+
+
+ #productos-estrella {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 1440px;  /* Establece el ancho máximo del contenedor */
+    margin: 300px auto;  /* Centra el contenedor dentro de la pantalla */
+}
+
+#productos-estrella h2 {
+    margin-bottom: 20px;
+    font-size: 40px;  /* Aumenté el tamaño del título para que sea más legible */
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding-top: 150px;
+}
+
+.producto {
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;  /* Limita el ancho de cada producto */
+    height: 450px;
+    flex: 1 1 300px;  /* Hace que los productos se ajusten bien dentro del contenedor */
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;  /* Hago que la imagen ocupe todo el ancho disponible del producto */
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.toggle-info {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    font-size: 30px;  
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+.info {
+    background: #9E9E9E;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 526px;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.info h3, .info h4 {
+    margin: 0 0 10px;
+}
+
+.info ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 15px;
+    margin: 0;
+}
+
+.info ul li {
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.info li{
+    padding: 0;
+}
+
+
+.info p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.oculto {
+    display: none;
+}
+
+
+@media (max-width: 758px) {
+    .menu {
+        display: block; 
+    }
+
+    .menu img{
+        width: 30px;
+        margin-top: 10px;
+    }
+    
+    ul {
+        display: none;  
+        background: #243c00ec;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        top: 85px;
+        padding: 0;  
+    }
+
+    ul.active {
+        display: flex; 
+    }
+
+    ul li {
+        display: block;  
+    }
+}
