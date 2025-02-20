@@ -1,19 +1,22 @@
-*{
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    font-family: sans-serif
+    font-family: sans-serif;
 }
 
+html, body {
+    overflow-x: hidden;
+}
 
 
 .navbar {
     display: flex;
     justify-content: space-between;
-    background: #243C00;
-    padding: 5px 240px;
+    background: linear-gradient(180deg, rgba(36, 60, 0, 0.96) -20.81%, rgba(62, 103, 1, 0.90) 139.49%);
+    padding: 5px 300px; 
 }
 
 .navbar .container {
@@ -37,7 +40,7 @@ ul {
 }
 
 ul li {
-    padding: 20px;
+    padding: 15px;
     margin-top: 20px;
 }
 
@@ -83,7 +86,7 @@ header {
 
 .carousel-item img {
     width: 100%;
-    height: 100%;
+    height: auto;  
     object-fit: cover;
 }
 
@@ -98,17 +101,7 @@ header {
     z-index: 2;
 }
 
-.carousel-title1 {
-    font-size: 70px;
-    margin-bottom: 200px;
-}
-
-.carousel-title2 {
-    font-size: 70px;
-    margin-bottom: 200px;
-}
-
-.carousel-title3 {
+.carousel-title1, .carousel-title2, .carousel-title3 {
     font-size: 70px;
     margin-bottom: 200px;
 }
@@ -164,6 +157,8 @@ header {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: -150px;
 }
 
 .dot.active {
@@ -173,7 +168,7 @@ header {
 
 /* Puntos de venta */ 
 
-.venta{
+.venta {
     padding-top: 60px;
     font-size: 36px;
     text-align: center;
@@ -188,18 +183,18 @@ header {
 .fotos-puntosventa {
     padding-top: 130px;
     display: flex;
-    gap: 85px;
+    gap: 20px; /* Reducir espacio entre fotos */
     flex-wrap: wrap;
 }
 
 .fotos-venta {
-    flex: 1 1 auto;
+    flex: 1 1 100%;  /* Deja que las imágenes se ajusten */
     max-width: 150px;
-    text-align: center; 
+    text-align: center;
 }
 
 .fotos-venta img {
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
 
@@ -233,7 +228,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white; 
+    color: white;
     width: 1000px;
 }
 
@@ -246,11 +241,11 @@ p {
     font-size: 25px;
 }
 
-.info-tour{
+.info-tour {
     padding-top: 80px;
 }
 
-.infotour-button{
+.infotour-button {
     background-color: #D94929;
     color: #fff;
     padding: 20px 30px;
@@ -267,15 +262,13 @@ p {
 }
 
 
+/* Productos estrella */
 
- /* Productos estrella */
-
-
- #productos-estrella {
+#productos-estrella {
     text-align: center;
     padding: 40px 20px;
-    max-width: 1440px;  /* Establece el ancho máximo del contenedor */
-    margin: 300px auto;  /* Centra el contenedor dentro de la pantalla */
+    max-width: 1440px;
+    margin: 300px auto;
 }
 
 #productos-estrella h2 {
@@ -295,15 +288,16 @@ p {
 .producto {
     position: relative;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 400px;  /* Limita el ancho de cada producto */
+    max-width: 400px;
     height: 450px;
-    flex: 1 1 300px;  /* Hace que los productos se ajusten bien dentro del contenedor */
+    flex: 1 1 300px;
 }
 
 figure {
     margin: 0;
     text-align: center;
 }
+
 
 .producto img {
     width: 100%;  /* Hago que la imagen ocupe todo el ancho disponible del producto */
@@ -378,15 +372,108 @@ figcaption {
     display: none;
 }
 
+/* Media query para pantallas de 1440px */
+@media (max-width: 1440px) {
+    .carousel-title1, .carousel-title2, .carousel-title3 {
+        font-size: 60px;
+        margin-bottom: 180px;
+    }
 
+    .carousel-button {
+        padding: 18px 28px;
+        font-size: 18px;
+    }
+}
+
+/* Media query para pantallas de 1280px */
+@media (max-width: 1280px) {
+    .carousel-title1, .carousel-title2, .carousel-title3 {
+        font-size: 50px;
+        margin-bottom: 160px;
+    }
+
+    .carousel-button {
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+}
+
+/* Media query para pantallas de 758px */
 @media (max-width: 758px) {
+    .carousel-title1, .carousel-title2, .carousel-title3 {
+        font-size: 40px;
+        margin-bottom: 140px;
+    }
+
+    .carousel-button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    /* Ajuste de la imagen del carrusel */
+    .carousel-item img {
+        object-fit: cover;
+        height: 350px; /* Asegúrate de ajustar la altura de la imagen */
+    }
+}
+
+/* Media query para pantallas menores de 500px (móviles) */
+@media (max-width: 500px) {
+
+    .logo img{
+        width: 150px;
+        height: auto;
+        
+    }
+
+    .menu img{
+        margin-top: 0;
+    }
+
+    .navbar{
+        padding:  5px 5px;
+    }
+
+    .carousel-title1, .carousel-title2, .carousel-title3 {
+        font-size: 30px;
+        margin-bottom: 120px;
+    }
+
+   
+
+    /* Ajuste de la imagen del carrusel */
+    .carousel-item img {
+        height: 800px; /* Ajusta la altura de la imagen en pantallas pequeñas */
+        width: 100%;
+        object-fit: cover;
+    }
+
+}
+
+
+@media (max-width: 1280px) {
     .menu {
         display: block; 
     }
 
+
     .menu img{
-        width: 30px;
+        width: 40px;
         margin-top: 10px;
+    }
+
+    .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+        touch-action: none;  /* Deshabilita el comportamiento predeterminado de arrastrar para evitar problemas */
+    }
+    
+    .carousel-item {
+        flex: 1 0 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
     }
     
     ul {
@@ -397,15 +484,50 @@ figcaption {
         justify-content: center;
         position: absolute;
         width: 100%;
-        top: 85px;
-        padding: 0;  
+        top: 105px;
+        padding: 0 auto;  
     }
 
     ul.active {
-        display: flex; 
+        display: flex;
+        z-index: 10; 
     }
 
     ul li {
         display: block;  
     }
+
+    .carousel-prev  {
+        display:  none;
+    }
+    
+    .carousel-next{
+        display: none;
+    }
+
+
+    /* puntos */
+    .carousel-dots {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 10;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        margin-top: -80px;
+    }
+    
+    .dot.active {
+        background-color: #fff;
+    }
+    
 }
