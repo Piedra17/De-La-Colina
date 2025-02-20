@@ -443,7 +443,7 @@ figcaption {
 
     /* Ajuste de la imagen del carrusel */
     .carousel-item img {
-        height: 800px; /* Ajusta la altura de la imagen en pantallas pequeñas */
+        height: 750px; /* Ajusta la altura de la imagen en pantallas pequeñas */
         width: 100%;
         object-fit: cover;
     }
@@ -466,7 +466,7 @@ figcaption {
         display: flex;
         transition: transform 0.5s ease-in-out;
         width: 100%;
-        touch-action: none;  /* Deshabilita el comportamiento predeterminado de arrastrar para evitar problemas */
+        object-fit: cover;
     }
     
     .carousel-item {
