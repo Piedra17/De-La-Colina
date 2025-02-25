@@ -400,6 +400,10 @@ figcaption {
 
 /* Media query para pantallas de 758px */
 @media (max-width: 758px) {
+    .navbar {
+        padding: 5px 10px; 
+    }
+
     .carousel-title1, .carousel-title2, .carousel-title3 {
         font-size: 40px;
         margin-bottom: 140px;
@@ -415,6 +419,44 @@ figcaption {
         object-fit: cover;
         height: 350px; /* Asegúrate de ajustar la altura de la imagen */
     }
+
+
+
+
+    .fotos-puntosventa {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .fotos-venta {
+        flex: 1 1 100%;  /* 1 imagen por fila */
+        max-width: 200px;  /* Limitar el tamaño máximo de las imágenes */
+    }
+
+
+
+    .foto-chiquita img {
+        object-fit: cover;
+        height: 700px;  /* Ajusta la altura de la imagen */
+    }
+
+    .texto-sobre-foto h2 {
+        flex-wrap: wrap;
+        font-size: 20px;  /* Reducir el tamaño del título */
+    }
+
+    .texto-sobre-foto p {
+        font-size: 10px;  /* Reducir el tamaño del texto */
+    }
+
+    .infotour-button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+
+    
 }
 
 /* Media query para pantallas menores de 500px (móviles) */
@@ -446,6 +488,44 @@ figcaption {
         height: 750px; /* Ajusta la altura de la imagen en pantallas pequeñas */
         width: 100%;
         object-fit: cover;
+    }
+
+
+
+
+    .navbar {
+        padding: 5px 5px;
+    }
+
+    .foto-chiquita img {
+        object-fit: cover;
+        height: 600px;  /* Reducir la altura de la imagen en pantallas muy pequeñas */
+    }
+
+    .texto-sobre-foto h2 {
+        font-size: 15px;  /* Reducir aún más el tamaño del título */
+    }
+
+    .texto-sobre-foto p {
+        font-size: 7px;  /* Reducir el tamaño del texto */
+    }
+
+    #productos-estrella h2 {
+        font-size: 24px;  /* Reducir tamaño de los títulos */
+    }
+
+    .productos {
+        gap: 15px;
+        padding-top: 20px;
+    }
+
+    .producto {
+        max-width: 200px;  /* Reducir tamaño de los productos */
+        height: 300px;  /* Ajustar altura */
+    }
+
+    .producto img {
+        height: 200px;  /* Ajustar altura de las imágenes de los productos */
     }
 
 }
