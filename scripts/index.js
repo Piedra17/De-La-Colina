@@ -1,5 +1,8 @@
-document.querySelector(".menu").addEventListener("click", () => {
-    document.querySelector("ul").classList.toggle("active");
+const menuButton = document.querySelector('.menu');
+const ulMenu = document.querySelector('ul');
+
+menuButton.addEventListener('click', () => {
+    ulMenu.classList.toggle('active');
 });
 
 
@@ -33,19 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Iniciar el carrusel con un intervalo automático
-    let autoSlide = setInterval(nextSlide, 4000);
+    let autoSlide = setInterval(nextSlide, 5000);
 
     // Agregar eventos a las flechas
     nextButton.addEventListener('click', () => {
         clearInterval(autoSlide); 
         nextSlide();
-        autoSlide = setInterval(nextSlide, 4000);
+        autoSlide = setInterval(nextSlide, 5000);
     });
 
     prevButton.addEventListener('click', () => {
         clearInterval(autoSlide); 
         prevSlide();
-        autoSlide = setInterval(nextSlide, 4000);
+        autoSlide = setInterval(nextSlide, 5000);
     });
 
     // Agregar eventos a los puntos
@@ -58,6 +61,89 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateCarousel();
 });
+
+
+// esto es para deslizar en tamaño de tablet hacia abajo
+
+const carousel = document.querySelector('.carousel');
+const dots = document.querySelectorAll('.dot');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+function updateDots() {
+    const scrollPosition = carousel.scrollLeft;
+    const carouselWidth = carousel.offsetWidth;
+    const totalItems = carousel.children.length;
+    const itemWidth = carouselWidth / totalItems;
+    const currentIndex = Math.round(scrollPosition / itemWidth);
+    dots.forEach((dot, index) => {
+        dot.classList.remove('active');
+        if (index === currentIndex) {
+            dot.classList.add('active');
+        }
+    });
+}
+
+if (window.innerWidth <= 1280) {
+    // Activar deslizamiento solo si el ancho de la pantalla es 1280px o menos
+    carousel.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+        isDown = false;
+    });
+
+    carousel.addEventListener('mouseup', () => {
+        isDown = false;
+        updateDots();  // Actualiza los puntos después de detener el deslizamiento
+    });
+
+    carousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 2;  // Ajusta el factor de "caminar" si es necesario
+        carousel.scrollLeft = scrollLeft - walk;
+    });
+
+    let touchStartX = 0;
+    let touchStartScroll = 0;
+
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchStartScroll = carousel.scrollLeft;
+    });
+
+    carousel.addEventListener('touchmove', (e) => {
+        const touchMoveX = e.touches[0].clientX;
+        const walk = (touchMoveX - touchStartX) * 2;  // Ajusta el factor de "caminar" si es necesario
+        carousel.scrollLeft = touchStartScroll - walk;
+    });
+
+    carousel.addEventListener('touchend', () => {
+        updateDots();  // Actualiza los puntos después de detener el deslizamiento
+    });
+
+    // Función para navegar al carrusel al hacer clic en los puntos
+    dots.forEach(dot => {
+        dot.addEventListener('click', (e) => {
+            const index = parseInt(e.target.getAttribute('data-index'));
+            const targetItem = carousel.children[index];
+            carousel.scrollTo({
+                left: targetItem.offsetLeft,
+                behavior: 'smooth'
+            });
+        });
+    });
+}
+
+// Para actualizar los puntos de navegación al cargar la página
+window.addEventListener('load', updateDots);
+
 
 
 
