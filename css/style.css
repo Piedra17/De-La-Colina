@@ -9,7 +9,6 @@
 
 html, body {
     overflow-x: hidden;
-    overflow: hidden;
 }
 
 
@@ -625,7 +624,8 @@ figcaption {
     }
 
     #productos-estrella h2 {
-        font-size: 24px;  /* Reducir tamaño de los títulos */
+        font-size: 20px;  /* Reducir tamaño de los títulos */
+        flex-wrap: wrap;
     }
 
     .productos {
@@ -646,7 +646,8 @@ figcaption {
         object-fit: cover;
         height: 500px;  /* Ajusta la altura de la imagen */
     }
-    
+
+
 .toggle-info {
     position: absolute;
     bottom: 10px;
