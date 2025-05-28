@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De La Colina</title>
+    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <img src="imagenes/logo y menu/logo.png" alt="logo de la colina">
+            </div>
+
+            <ul class="opciones">
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Cafetería</a></li>
+                <li><a href="#">Tour</a></li>
+                <li><a href="#"> Sobre Nosotros</a></li>
+                
+            </ul>
+
+            <div class="menu">
+                <button class="menu-btn" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <section class="Banner-principal">
+            <article class="contenido-principal">
+                <img src="imagenes/lading/banner3.png" alt=""Banner-principal de productos>
+            </article>
+            <div class="banner-texto">
+                <h1>Conoce mas nuestros productos artesanales</h1>
+            </div>
+        </section>
+
+
+
+
+        <section class="seccion-pestanas">
+            <h2 class="titulo-pestanas">Nuestros Productos</h2>
+
+            <!-- Pestañas -->
+            <div class="tabs">
+                <button class="tab-link active" onclick="mostrarPestana(event, 'mermeladas')">Mermeladas</button>
+                <button class="tab-link" onclick="mostrarPestana(event, 'jugos')">Jugos</button>
+                <button class="tab-link" onclick="mostrarPestana(event, 'almibar')">Almíbar</button>
+            </div>
+
+            <!-- Contenido: Mermeladas -->
+            <div id="mermeladas" class="tab-content mostrar">
+                <div class="productos-tab">
+                <article class="producto-card">
+                    <div class="img-container">
+                    <img src="imagenes/productos/m1.jpg" alt="Mermelada de Papayuela">
+                    </div>
+                    <div class="card-contenido">
+                    <h3 class="texto-productos">Mermelada de Manzana/Cafe</h3>
+                    <a href="https://wa.me/50688853533?text=Hola%2C%20quiero%20más%20información%20sobre%20tus%20productos" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                    </a>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="img-container">
+                    <img src="imagenes/productos/m2.jpg" alt="Mermelada de Mora">
+                    </div>
+                    <div class="card-contenido">
+                    <h3 class="texto-productos">Mermelada de Mora</h3>
+                    <a href="https://wa.me/50688853533?text=Hola%2C%20quiero%20más%20información%20sobre%20tus%20productos" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                    </a>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="img-container">
+                    <img src="imagenes/productos/m3.jpg" alt="Mermelada de Mora">
+                    </div>
+                    <div class="card-contenido">
+                    <h3 class="texto-productos">Mermelada de Manzana</h3>
+                    <a href="https://wa.me/50688853533?text=Hola%2C%20quiero%20más%20información%20sobre%20tus%20productos" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                    </a>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="img-container">
+                    <img src="imagenes/productos/m4.jpg" alt="Mermelada de Mora">
+                    </div>
+                    <div class="card-contenido">
+                    <h3 class="texto-productos">Mermelada de Papayuela</h3>
+                    <a href="https://wa.me/50688853533?text=Hola%2C%20quiero%20más%20información%20sobre%20tus%20productos" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                    </a>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="img-container">
+                    <img src="imagenes/productos/m5.jpg" alt="Mermelada de Mora">
+                    </div>
+                    <div class="card-contenido">
+                    <h3 class="texto-productos">Mermelada de Manzana</h3>
+                    <a href="https://wa.me/50688853533?text=Hola%2C%20quiero%20más%20información%20sobre%20tus%20productos" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                    </a>
+                    </div>
+                </article>
+                </div>
+            </div>
+
+            <!-- Contenido: Jugos -->
+            <div id="jugos" class="tab-content">
+                <div class="productos-tab">
+                <article class="producto-card">
+                    <div class="img-container">
+                    <img src="imagenes/productos/j1.jpg" alt="Jugo de Manzana">
+                    </div>
+                    <div class="card-contenido">
+                    <h3 class="texto-productos">Jugo de Manzana</h3>
+                    <a href="https://wa.me/50688853533?text=Hola%2C%20quiero%20más%20información%20sobre%20tus%20productos" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                    </a>
+                    </div>
+                </article>
+                </div>
+            </div>
+
+            <!-- Contenido: Almíbar -->
+            <div id="almibar" class="tab-content">
+                <div class="productos-tab">
+                <!-- Puedes agregar productos aquí -->
+                <article class="producto-card">
+                    <div class="img-container">
+                    <img src="imagenes/productos/a1.jpg" alt="Mermelada de Mora">
+                    </div>
+                    <div class="card-contenido">
+                    <h3 class="texto-productos">Higos en Almíbar</h3>
+                    <a href="https://wa.me/50688853533?text=Hola%2C%20quiero%20más%20información%20sobre%20tus%20productos" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                    </a>
+                    </div>
+                </article>
+                </div>
+            </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+        <footer class="footer">
+        <div class="contenedor">
+            <div class="footer-top">
+            <div class="footer-logo">
+                <img src="imagenes/logo y menu/logo.png" alt="De la Colina" />
+            </div>
+            <div class="footer-nav">
+                <a href="productos.html">Productos</a>
+                <a href="#">Cafetería</a>
+                <a href="#">Tour</a>
+                <a href="#">Sobre Nosotros</a>
+                
+            </div>
+            <div class="footer-social">
+                <a href="https://wa.me/50688853533?text=Hola%2C%20quiero%20más%20información%20sobre%20tus%20productos"target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/delacolinacr/"target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/delacolinacr/"target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            </div>
+            <div class="footer-bottom">
+            <p>Copyright © 2025 De La Colina.CR</p>
+            <p>Diseñado y Programado Por Kendall.P</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="scripts/pestañas.js"></script>
+</body>
+</html>
