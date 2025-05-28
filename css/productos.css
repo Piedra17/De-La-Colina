@@ -122,14 +122,16 @@ ul .active li {
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  margin-top: 70px;
 }
 
 .tab-link {
   background-color: #eee;
   border: none;
-  padding: 10px 20px;
+  padding: 20px 40px;
   margin: 5px;
-  font-size: 1rem;
+  font-size: 17px;
+  font-weight: 600;
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s;
@@ -155,6 +157,7 @@ ul .active li {
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
+  margin-top: 100px;
 }
 
 .producto-card {
