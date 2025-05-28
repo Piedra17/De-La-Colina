@@ -15,7 +15,7 @@ html, body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(180deg, rgba(36, 60, 0, 0.96) -20.81%, rgba(62, 103, 1, 0.90) 139.49%);
+    background-color: #263A0A;
     padding: 5px 300px; 
 }
 
@@ -59,6 +59,15 @@ ul .active li {
     width: 50px;
     height: 60px;
     display: none;
+}
+
+.menu-btn{
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    color: #fff;
+    padding-top: 10px;
 }
 
 header {
@@ -682,8 +691,8 @@ input, select, .button-formulario {
 }
 
 
-/* Media query para pantallas de 758px */
-@media (max-width: 758px) {
+/* Media query para pantallas de 768px */
+@media (max-width: 768px) {
     .navbar {
         padding: 5px 10px; 
     }
@@ -751,8 +760,24 @@ input, select, .button-formulario {
     }
 
 
-    
+.footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
+
+.footer-nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-social {
+    justify-content: center;
+}
+}
+
+
 
 /* Media query para pantallas menores de 500px (móviles) */
 @media (max-width: 500px) {
@@ -763,8 +788,8 @@ input, select, .button-formulario {
         
     }
 
-    .menu img{
-        margin-top: 0;
+    .menu-btn{
+        padding-top: 1px;
     }
 
     .navbar{
