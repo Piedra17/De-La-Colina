@@ -158,3 +158,13 @@ function toggleInfo(index) {
         }
     });
 }
+
+
+
+
+
+
+
+// Codigo para los formularios
+
+

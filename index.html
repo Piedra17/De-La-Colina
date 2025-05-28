@@ -128,7 +128,7 @@
             <div class="foto-chiquita">
                 <img src="imagenes/lading/tour de frutas landing.png" alt="">
                 <div class="texto-sobre-foto">
-                    <h2>Descubre el corazón de la tradición familiar</h2>
+                    <h2 class="texto-prin-niña">Descubre el corazón de la tradición familiar</h2>
                     <p class="texto niña">En el Tour ALMA 5, cada momento está diseñado para conectar a las <br>
                         personas, rodeados de naturaleza, historia y una experiencia inolvidable.<br>
                         Desde recorridos guiados por paisajes encantadores hasta actividades interactivas<br>
@@ -219,7 +219,94 @@
     </section>
 
 
+    <!-- informacion de la cafeteria -->
 
+
+    <section class="container-frutas">
+        <article class="container-tour">
+            <div class="foto-cafeteria">
+                <img src="imagenes/lading/cafeteria1.png" alt="">
+                <div class="texto-sobre-foto">
+                    <h2 class="texto-prin-cafeteria">Descubre el corazón de nuestra Cafetería</h2>
+                    <p class="texto cafeteria">Cada momento está diseñado para conectar a las personas, rodeados de <br>
+                         naturaleza, historia y una experiencia inolvidable. Desde recorridos guiados por <br>
+                          paisajes encantadores hasta actividades interactivas para todas las edades, <br>
+                           este es el lugar perfecto para fortalecer lazos y crear recuerdos únicos.
+                    </p>
+                    <div class="info-tour">
+                        <a href="#" class="infotour-button">Conoce más</a>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+    </section>
+
+
+
+
+    <section class="container-formulario">
+        <h2 class="texto-formulario">Contáctanos para Dudas, Pedidos, Recomendaciones y para recibir novedades.</h2>
+    
+        <form id="contactForm" class="contact-from" action="enviar_correo.php" method="POST">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellidos" required>
+    
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" required>
+    
+            <label for="ubicacion">¿De dónde nos contactas?</label>
+            <select id="ubicacion" name="ubicacion" required>
+                <option value="">Selecciona una opción</option>
+                <option value="San José">San José</option>
+                <option value="Cartago">Cartago</option>
+                <option value="Alajuela">Alajuela</option>
+                <option value="Heredia">Heredia</option>
+                <option value="Guanacaste">Guanacaste</option>
+                <option value="Puntarenas">Puntarenas</option>
+                <option value="Limón">Limón</option>
+                <option value="Otro">Otro/a</option>
+            </select>
+    
+            <label for="telefono">Número de Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Escriba su número de teléfono" required>
+    
+            <button type="submit" id="enviar" class="button-formulario" disabled>Enviar</button>
+        </form>
+    </section>
+    
+
+    
+    
+    
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="footer-top">
+            <div class="footer-logo">
+                <img src="imagenes/logo y menu/logo.png" alt="De la Colina" />
+            </div>
+            <div class="footer-nav">
+                <a href="#">Cafetería</a>
+                <a href="#">Tour</a>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Contáctanos</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            </div>
+            <div class="footer-bottom">
+            <p>Copyright © 2025 De La Colina.CR</p>
+            <p>Diseñado y Programado Por Kendall.P</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    
 
 
 
