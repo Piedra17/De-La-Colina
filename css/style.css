@@ -123,7 +123,7 @@ header {
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    transition: background-color 0.8s;
+    transition: background-color 2s;
 }
 
 .carousel-button:hover {
