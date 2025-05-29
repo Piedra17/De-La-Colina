@@ -1,5 +1,6 @@
 const menuButton = document.querySelector('.menu');
 const ulMenu = document.querySelector('ul');
+const btnEnviar = document.querySelector('.button-formulario');
 
 menuButton.addEventListener('click', () => {
     ulMenu.classList.toggle('active');
@@ -25,13 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para mover al siguiente slide
     function nextSlide() {
-        currentIndex = (currentIndex + 1) % items.length; 
+        currentIndex = (currentIndex + 1) % items.length;
         updateCarousel();
     }
 
     // Función para mover al slide anterior
     function prevSlide() {
-        currentIndex = (currentIndex - 1 + items.length) % items.length; 
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
         updateCarousel();
     }
 
@@ -40,13 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Agregar eventos a las flechas
     nextButton.addEventListener('click', () => {
-        clearInterval(autoSlide); 
+        clearInterval(autoSlide);
         nextSlide();
         autoSlide = setInterval(nextSlide, 5000);
     });
 
     prevButton.addEventListener('click', () => {
-        clearInterval(autoSlide); 
+        clearInterval(autoSlide);
         prevSlide();
         autoSlide = setInterval(nextSlide, 5000);
     });
@@ -149,7 +150,7 @@ window.addEventListener('load', updateDots);
 
 function toggleInfo(index) {
     const infos = document.querySelectorAll('.info');
-    
+
     infos.forEach((info, i) => {
         if (i === index) {
             info.classList.toggle('oculto');
@@ -166,5 +167,35 @@ function toggleInfo(index) {
 
 
 // Codigo para los formularios
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("formulario-contacto");
+    const button = document.getElementById("enviar");
+    const inputs = form.querySelectorAll("input, select");
+
+    function validarFormulario() {
+        let esValido = true;
+
+        inputs.forEach(input => {
+            if (!input.checkValidity()) {
+                esValido = false;
+            }
+        });
+    button.onclick = window.href = "index.html"
+        if (esValido) {
+            button.disabled = false;
+            button.classList.add("enabled");
+        } else {
+            button.disabled = true;
+            button.classList.remove("enabled");
+        }
+    }
 
 
+
+    inputs.forEach(input => {
+        input.addEventListener("input", validarFormulario);
+        input.addEventListener("change", validarFormulario);
+    });
+});
+
+//FUNCION PARA MOVER A LA PAGINA DE INICIO CUANDO SE LE DA AL BOTON ENVIAR

@@ -36,7 +36,7 @@
 
         <!-- Banner principal -->
         <!-- Carrusel -->
-        <section class="carousel-container">
+        <section class="carousel-container" id="banner">
             <div class="carousel">
                 <div class="carousel-item">
                     <img src="imagenes/lading/banner.png" alt="Item 1">
@@ -228,36 +228,42 @@
 
 
 
-    <section class="container-formulario">
-        <h2 class="texto-formulario">Contáctanos para Dudas, Pedidos, Recomendaciones y para recibir novedades.</h2>
-    
-        <form id="contactForm" class="contact-from" action="enviar_correo.php" method="POST">
-            <label for="nombre">Nombre Completo</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellidos" required>
-    
-            <label for="correo">Correo Electrónico</label>
-            <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" required>
-    
-            <label for="ubicacion">¿De dónde nos contactas?</label>
-            <select id="ubicacion" name="ubicacion" required>
-                <option value="">Selecciona una opción</option>
-                <option value="San José">San José</option>
-                <option value="Cartago">Cartago</option>
-                <option value="Alajuela">Alajuela</option>
-                <option value="Heredia">Heredia</option>
-                <option value="Guanacaste">Guanacaste</option>
-                <option value="Puntarenas">Puntarenas</option>
-                <option value="Limón">Limón</option>
-                <option value="Otro">Otro/a</option>
-            </select>
-    
-            <label for="telefono">Número de Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="Escriba su número de teléfono" required>
-    
-            <button type="submit" id="enviar" class="button-formulario" disabled>Enviar</button>
-        </form>
-    </section>
-    
+<section class="container-formulario">
+  <h2 class="texto-formulario">
+    Contáctanos para Dudas, Pedidos, Recomendaciones y para recibir novedades.
+  </h2>
+
+  <form id="formulario-contacto" action="https://formsubmit.co/kendallpiedraperez@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+
+    <label for="nombre">Nombre Completo</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellidos" required>
+
+    <label for="correo">Correo Electrónico</label>
+    <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" required>
+
+    <label for="ubicacion">¿De dónde nos contactas?</label>
+    <select id="ubicacion" name="ubicacion" required>
+      <option value="">Selecciona una opción</option>
+      <option value="San José">San José</option>
+      <option value="Cartago">Cartago</option>
+      <option value="Alajuela">Alajuela</option>
+      <option value="Heredia">Heredia</option>
+      <option value="Guanacaste">Guanacaste</option>
+      <option value="Puntarenas">Puntarenas</option>
+      <option value="Limón">Limón</option>
+      <option value="Otro">Otro/a</option>
+    </select>
+
+    <label for="telefono">Número de Teléfono</label>
+    <input type="tel" id="telefono" name="telefono" placeholder="Escriba su número de teléfono" required>
+
+    <button type="submit" id="enviar" class="button-formulario" disabled>Enviar</button>
+  </form>
+</section>
+
+
 
     
     
