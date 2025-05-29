@@ -589,30 +589,12 @@ ul .active li {
         margin-bottom: 120px;
     }
 
-   
-
-    /* Ajuste de la imagen del carrusel */
-    .carousel-item img {
-        height: 700px; /* Ajusta la altura de la imagen en pantallas pequeñas */
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .infotour-button {
-        background-color: #D94929;
-        color: #fff;
-        padding: 7px 15px;
-        border-radius: 20px;
-        font-size: 15px;
-        font-weight: bold;
-        transition: background-color 0.8s;
-    }
-
-
-
-
     .navbar {
         padding: 5px 5px;
+    }
+
+    .contenido-principal{
+        height: 100vh;
     }
 
     .foto-chiquita img {
