@@ -241,3 +241,133 @@ ul .active li {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+
+
+/* Media query para pantallas de 1440px */
+@media (max-width: 1440px) {
+    .carousel-title1, .carousel-title2, .carousel-title3 {
+        font-size: 60px;
+        margin-bottom: 180px;
+    }
+
+    .carousel-button {
+        padding: 18px 28px;
+        font-size: 18px;
+    }
+}
+
+/* Media query para pantallas de 1280px */
+@media (max-width: 1280px) {
+    .carousel-title1, .carousel-title2, .carousel-title3 {
+        font-size: 50px;
+        margin-bottom: 160px;
+    }
+
+    .carousel-button {
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+}
+
+
+
+@media (max-width: 1280px) {
+    .menu {
+        display: block; 
+    }
+
+
+    .menu img{
+        width: 40px;
+        margin-top: 20px;
+    }
+
+    .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .carousel-item {
+        flex: 1 0 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    
+    ul.opciones {
+        display: none;
+        position: absolute;  
+        background: #243c00;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        top: 90px;
+        padding: 0 0 70px 0;
+        left: 0;  
+    }
+
+    ul.active {
+        display: flex;
+        z-index: 10; 
+    }
+
+    ul li {
+        display: block;  
+    }
+    
+}
+
+
+/* Media query para pantallas de 768px */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5px 10px; 
+    }
+
+  .footer-top {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+  }
+
+  .footer-nav {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+
+  .footer-social {
+      justify-content: center;
+  }
+}
+
+
+
+/* Media query para pantallas menores de 500px (móviles) */
+@media (max-width: 500px) {
+
+    .logo img{
+        width: 150px;
+        height: auto;
+        
+    }
+
+    .menu-btn{
+        padding-top: 1px;
+    }
+
+    .navbar{
+        padding:  5px 5px;
+    }
+
+    .navbar {
+        padding: 5px 5px;
+    }
+
+
+
+}

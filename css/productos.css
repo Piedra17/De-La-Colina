@@ -356,3 +356,363 @@ ul .active li {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+
+
+
+
+/* Media query para pantallas de 1440px */
+@media (max-width: 1440px) {
+    .carousel-title1, .carousel-title2, .carousel-title3 {
+        font-size: 60px;
+        margin-bottom: 180px;
+    }
+
+    .carousel-button {
+        padding: 18px 28px;
+        font-size: 18px;
+    }
+}
+
+/* Media query para pantallas de 1280px */
+@media (max-width: 1280px) {
+    .carousel-title1, .carousel-title2, .carousel-title3 {
+        font-size: 50px;
+        margin-bottom: 160px;
+    }
+
+    .carousel-button {
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+}
+
+
+
+@media (max-width: 1280px) {
+    .menu {
+        display: block; 
+    }
+
+
+    .menu img{
+        width: 40px;
+        margin-top: 20px;
+    }
+
+    .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .carousel-item {
+        flex: 1 0 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    
+    ul.opciones {
+        display: none;
+        position: absolute;  
+        background: #243c00;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        top: 90px;
+        padding: 0 0 70px 0;
+        left: 0;  
+    }
+
+    ul.active {
+        display: flex;
+        z-index: 10; 
+    }
+
+    ul li {
+        display: block;  
+    }
+
+    .carousel-prev  {
+        display:  none;
+    }
+    
+    .carousel-next{
+        display: none;
+    }
+
+    .carousel-button {
+        padding: 18px 28px;
+        font-size: 18px;
+    }
+
+
+
+
+    /* puntos */
+    .carousel-dots {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 10;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        margin-top: -20px;
+    }
+    
+    .dot.active {
+        background-color: #fff;
+    }
+    
+}
+
+
+/* Media query para pantallas de 768px */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5px 10px; 
+    }
+
+    .carousel-title1, .carousel-title2, .carousel-title3 {
+        font-size: 40px;
+        margin-bottom: 140px;
+    }
+
+    .carousel-button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    /* Ajuste de la imagen del carrusel */
+    .carousel-item img {
+        object-fit: cover;
+        height: 800px; /* Asegúrate de ajustar la altura de la imagen */
+        width: 100%;
+    }
+
+
+
+
+    .fotos-puntosventa {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .fotos-venta {
+        flex: 1 1 100%;  /* 1 imagen por fila */
+        max-width: 200px;  /* Limitar el tamaño máximo de las imágenes */
+    }
+
+
+    .container-frutas{
+        margin-top: 200px;
+    }
+
+
+    .foto-chiquita img {
+        object-fit: cover;
+        height: 500px;  /* Ajusta la altura de la imagen */
+    }
+
+    .texto-sobre-foto h2 {
+        flex-wrap: wrap;
+        font-size: 25px;  /* Reducir el tamaño del título */
+    }
+
+    .texto-sobre-foto p {
+        font-size: 10px;  /* Reducir el tamaño del texto */
+    }
+
+    .infotour-button {
+        background-color: #D94929;
+        color: #fff;
+        padding: 7px 15px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+        transition: background-color 0.8s;
+    }
+
+
+.footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-social {
+    justify-content: center;
+}
+}
+
+
+
+/* Media query para pantallas menores de 500px (móviles) */
+@media (max-width: 500px) {
+
+    .logo img{
+        width: 150px;
+        height: auto;
+        
+    }
+
+    .menu-btn{
+        padding-top: 1px;
+    }
+
+    .navbar{
+        padding:  5px 5px;
+    }
+
+    .carousel-title1, .carousel-title2, .carousel-title3 {
+        font-size: 30px;
+        margin-bottom: 120px;
+    }
+
+   
+
+    /* Ajuste de la imagen del carrusel */
+    .carousel-item img {
+        height: 700px; /* Ajusta la altura de la imagen en pantallas pequeñas */
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .infotour-button {
+        background-color: #D94929;
+        color: #fff;
+        padding: 7px 15px;
+        border-radius: 20px;
+        font-size: 15px;
+        font-weight: bold;
+        transition: background-color 0.8s;
+    }
+
+
+
+
+    .navbar {
+        padding: 5px 5px;
+    }
+
+    .foto-chiquita img {
+        object-fit: cover;
+        height: 600px;  /* Reducir la altura de la imagen en pantallas muy pequeñas */
+    }
+
+    .texto-sobre-foto h2 {
+        font-size: 15px;  /* Reducir aún más el tamaño del título */
+    }
+
+    .texto-sobre-foto p {
+        font-size: 7px;  /* Reducir el tamaño del texto */
+    }
+
+    #productos-estrella h2 {
+        font-size: 20px;  /* Reducir tamaño de los títulos */
+        flex-wrap: wrap;
+    }
+
+    .productos {
+        gap: 15px;
+        padding-top: 20px;
+    }
+
+    .producto {
+        max-width: 300px; 
+        height: 300px; 
+    }
+
+    .producto img {
+        height: 300px;  
+    }
+
+    .foto-chiquita img {
+        object-fit: cover;
+        height: 500px;  /* Ajusta la altura de la imagen */
+    }
+
+
+.toggle-info {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    font-size: 25px;  
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+.info {
+    background: #9E9E9E;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.info h3, .info h4 {
+    margin: 0 0 5px;
+}
+
+.info h4{
+    font-size: 15px;
+}
+
+.info ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 5px;
+    margin: 0;
+}
+
+.info ul li {
+    margin-bottom: 0px;
+    font-size: 10px;
+}
+
+.info li{
+    padding: 0;
+}
+
+
+.info p {
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+}
+
+
+
