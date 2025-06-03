@@ -7,7 +7,8 @@
     font-family: sans-serif;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
 }
 
@@ -16,7 +17,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     background-color: #263A0A;
-    padding: 5px 300px; 
+    padding: 5px 300px;
 }
 
 .navbar .container {
@@ -61,7 +62,7 @@ ul .active li {
     display: none;
 }
 
-.menu-btn{
+.menu-btn {
     background: none;
     border: none;
     font-size: 40px;
@@ -95,7 +96,7 @@ header {
 
 .carousel-item img {
     width: 100%;
-    height: auto;  
+    height: auto;
     object-fit: cover;
 }
 
@@ -110,7 +111,9 @@ header {
     z-index: 2;
 }
 
-.carousel-title1, .carousel-title2, .carousel-title3 {
+.carousel-title1,
+.carousel-title2,
+.carousel-title3 {
     font-size: 70px;
     margin-bottom: 200px;
 }
@@ -131,7 +134,8 @@ header {
     color: #D94929;
 }
 
-.carousel-prev, .carousel-next {
+.carousel-prev,
+.carousel-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -175,7 +179,7 @@ header {
 }
 
 
-/* Puntos de venta */ 
+/* Puntos de venta */
 
 .venta {
     padding-top: 60px;
@@ -192,12 +196,14 @@ header {
 .fotos-puntosventa {
     padding-top: 130px;
     display: flex;
-    gap: 20px; /* Reducir espacio entre fotos */
+    gap: 20px;
+    /* Reducir espacio entre fotos */
     flex-wrap: wrap;
 }
 
 .fotos-venta {
-    flex: 1 1 100%;  /* Deja que las imágenes se ajusten */
+    flex: 1 1 100%;
+    /* Deja que las imágenes se ajusten */
     max-width: 150px;
     text-align: center;
 }
@@ -274,18 +280,19 @@ p {
 /* Productos estrella */
 /* Sección general de productos */
 
-.contenedor-productos{
+.contenedor-productos {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
 }
-.titulo-estrella{
+
+.titulo-estrella {
     font-size: 30px;
     text-align: center;
     padding-top: 100px;
 }
 
-.productos{
+.productos {
     padding-top: 100px;
     display: flex;
     gap: 40px;
@@ -294,9 +301,10 @@ p {
     flex-wrap: wrap;
 }
 
-.texto-productos{
+.texto-productos {
     text-align: center;
 }
+
 .producto-card {
     background: white;
     border-radius: 12px;
@@ -311,7 +319,8 @@ p {
 .img-container {
     position: relative;
     width: 100%;
-    height: 500px; /* Aumenta el tamaño de la imagen */
+    height: 500px;
+    /* Aumenta el tamaño de la imagen */
     overflow: hidden;
 }
 
@@ -326,7 +335,8 @@ p {
 .img-container::after {
     content: '';
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0);
@@ -383,7 +393,7 @@ p {
     max-width: 1920px;
 }
 
-.foto-cafeteria{
+.foto-cafeteria {
     display: flex;
     align-items: center;
     position: relative;
@@ -436,17 +446,18 @@ p {
 }
 
 /* mapa */
-    #map {
-        height: 500px;
-        width: 50%;
-        margin: 0 auto;
-        margin-top: 50px;
-    }
-    .titulo-ubicacion{
-        font-size: 30px;
-        text-align: center;
-        padding-top: 150px;
-    }
+#map {
+    height: 500px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.titulo-ubicacion {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 150px;
+}
 
 
 /* formulario para mas info */
@@ -470,7 +481,7 @@ p {
     margin-top: 50px;
 }
 
-.container-formulario{
+.container-formulario {
     max-width: 1440px;
     align-items: center;
     padding-top: 150px;
@@ -509,33 +520,33 @@ select,
 /* Footer */
 
 .footer {
-  background-color: #263A0A;
-  color: white;
-  text-align: center;
-  padding: 20px 10px;
-  margin-top: 300px;
+    background-color: #263A0A;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 300px;
 }
 
 .footer-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
 }
 
 .footer-logo img {
-  height: 50px;
-  margin: 10px;
+    height: 50px;
+    margin: 10px;
 }
 
 .footer-nav a {
-  color: white;
-  font-weight: bold;
-  position: relative;
-  text-decoration: none;
-  font-size: 20px;
-  margin: 5px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 5px;
 }
 
 .footer-nav a::after {
@@ -549,50 +560,50 @@ select,
 }
 
 .footer-nav a:hover::after {
-  width: 100%; 
+    width: 100%;
 }
 
 .footer-social {
-  display: flex;
-  gap: 10px;
+    display: flex;
+    gap: 10px;
 }
 
 .footer-social a {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  background-color: white;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 32px;
-  color: #263A0A;
-  font-size: 16px;
-  transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    color: #263A0A;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .footer-social a:hover {
-  background-color: #ccc;
-  color: #000;
+    background-color: #ccc;
+    color: #000;
 }
 
 .footer-bottom {
-  margin-top: 30px;
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  line-height: 1.6;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding-top: 15px;
+    margin-top: 30px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    line-height: 1.6;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
 }
 
-.footer-bottom p{
+.footer-bottom p {
     font-size: 15px;
 }
 
 .contenedor {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 
@@ -612,7 +623,10 @@ select,
 
 /* Media query para pantallas de 1440px */
 @media (max-width: 1440px) {
-    .carousel-title1, .carousel-title2, .carousel-title3 {
+
+    .carousel-title1,
+    .carousel-title2,
+    .carousel-title3 {
         font-size: 60px;
         margin-bottom: 180px;
     }
@@ -625,7 +639,10 @@ select,
 
 /* Media query para pantallas de 1280px */
 @media (max-width: 1280px) {
-    .carousel-title1, .carousel-title2, .carousel-title3 {
+
+    .carousel-title1,
+    .carousel-title2,
+    .carousel-title3 {
         font-size: 50px;
         margin-bottom: 160px;
     }
@@ -640,11 +657,11 @@ select,
 
 @media (max-width: 1280px) {
     .menu {
-        display: block; 
+        display: block;
     }
 
 
-    .menu img{
+    .menu img {
         width: 40px;
         margin-top: 20px;
     }
@@ -655,41 +672,41 @@ select,
         width: 100%;
         object-fit: cover;
     }
-    
+
     .carousel-item {
         flex: 1 0 100%;
         display: flex;
         justify-content: center;
         position: relative;
     }
-    
+
     ul.opciones {
         display: none;
-        position: absolute;  
+        position: absolute;
         background: #2a4501;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
-        top: 100px;
+        top: 90px;
         padding: 0 0 70px 0;
-        left: 0;  
+        left: 0;
     }
 
     ul.active {
         display: flex;
-        z-index: 10; 
+        z-index: 10;
     }
 
     ul li {
-        display: block;  
+        display: block;
     }
 
-    .carousel-prev  {
-        display:  none;
+    .carousel-prev {
+        display: none;
     }
-    
-    .carousel-next{
+
+    .carousel-next {
         display: none;
     }
 
@@ -711,7 +728,7 @@ select,
         gap: 10px;
         z-index: 10;
     }
-    
+
     .dot {
         width: 10px;
         height: 10px;
@@ -720,21 +737,23 @@ select,
         cursor: pointer;
         margin-top: -20px;
     }
-    
+
     .dot.active {
         background-color: #fff;
     }
-    
+
 }
 
 
 /* Media query para pantallas de 768px */
 @media (max-width: 768px) {
     .navbar {
-        padding: 5px 10px; 
+        padding: 5px 10px;
     }
 
-    .carousel-title1, .carousel-title2, .carousel-title3 {
+    .carousel-title1,
+    .carousel-title2,
+    .carousel-title3 {
         font-size: 40px;
         margin-bottom: 140px;
     }
@@ -747,7 +766,8 @@ select,
     /* Ajuste de la imagen del carrusel */
     .carousel-item img {
         object-fit: cover;
-        height: 800px; /* Asegúrate de ajustar la altura de la imagen */
+        height: 800px;
+        /* Asegúrate de ajustar la altura de la imagen */
         width: 100%;
     }
 
@@ -761,28 +781,33 @@ select,
     }
 
     .fotos-venta {
-        flex: 1 1 100%;  /* 1 imagen por fila */
-        max-width: 200px;  /* Limitar el tamaño máximo de las imágenes */
+        flex: 1 1 100%;
+        /* 1 imagen por fila */
+        max-width: 200px;
+        /* Limitar el tamaño máximo de las imágenes */
     }
 
 
-    .container-frutas{
+    .container-frutas {
         margin-top: 200px;
     }
 
 
     .foto-chiquita img {
         object-fit: cover;
-        height: 500px;  /* Ajusta la altura de la imagen */
+        height: 500px;
+        /* Ajusta la altura de la imagen */
     }
 
     .texto-sobre-foto h2 {
         flex-wrap: wrap;
-        font-size: 25px;  /* Reducir el tamaño del título */
+        font-size: 25px;
+        /* Reducir el tamaño del título */
     }
 
     .texto-sobre-foto p {
-        font-size: 10px;  /* Reducir el tamaño del texto */
+        font-size: 10px;
+        /* Reducir el tamaño del texto */
     }
 
     .infotour-button {
@@ -801,90 +826,110 @@ select,
 
 /* Media query para pantallas menores de 500px (móviles) */
 @media (max-width: 500px) {
-.carousel-title1, .carousel-title2, .carousel-title3 {
-    font-size: 23px;
-    margin-bottom: 80px;
-    padding-top: 60px;
-}
+    .logo img {
+        width: 150px;
+    }
 
-.carousel-item img {
-    width: 100%;
-    height: 600px;  
-    object-fit: cover;
-}
+    .menu button {
+        padding: 0;
+    }
 
-.venta, .texto-prin-niña{
-    font-size: 23px;
-}
+    .carousel-title1,
+    .carousel-title2,
+    .carousel-title3 {
+        font-size: 23px;
+        margin-bottom: 80px;
+        padding-top: 60px;
+    }
 
-.texto-niña{
-    font-size: 20px;
-}
+    .carousel-item img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
 
-.texto-sobre-foto,
-.texto-sobre-cafeteria {
-    width: 90%;
-    padding: 0 10px;
-}
+    .venta,
+    .texto-prin-niña {
+        font-size: 23px;
+    }
 
-.container-frutas,
-.container-cafeteria,
-.container-formulario {
-    margin-top: 100px;
-}
+    .texto-niña {
+        font-size: 20px;
+    }
 
-.foto-cafeteria img {
-    max-height: 400px;
-    height: 800px;
-}
+    .texto-sobre-foto,
+    .texto-sobre-cafeteria {
+        width: 90%;
+        padding: 0 10px;
+    }
 
-.puntosventa-container,
-.productos,
-.footer-top {
-    flex-direction: column;
-    align-items: center;
-}
+    .container-frutas,
+    .container-cafeteria,
+    .container-formulario {
+        margin-top: 100px;
+    }
 
-.footer-nav{
-    max-width: 100px;
-}
-.footer-nav a {
-    display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+    .foto-cafeteria img {
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+    }
 
-.producto-card {
-    width: 90%;
+    .puntosventa-container,
+    .productos,
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav {
+        max-width: 100px;
+    }
+
+    .footer-nav a {
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .producto-card {
+        width: 90%;
+    }
+
+    #map {
+        width: 90%;
+    }
+
+    .texto-formulario {
+        font-size: 23px;
+    }
+
+    .container-formulario {
+        padding: 10px;
+        max-width: 350px;
+    }
+
+    .carousel-button,
+    .infotour-button {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 0;
+        margin-top: 100px;
+    }
+
+    .foto-chiquita img {
+        height: 700px;
+        max-width: 650px;
+    }
+
+    p.texto-niña {
+        font-size: 17px;
+    }
+
+    .a {
+        padding-top: 100px;
+    }
 }
-
-#map {
-    width: 90%;
-}
-
-.texto-formulario{
-    font-size: 23px;
-}
-
-.container-formulario{
-    padding: 10px;
-}
-
-.carousel-button,
-.infotour-button {
-    padding: 12px 20px;
-    font-size: 16px;
-}
-
-.footer{
-    padding: 0;
-    margin-top: 100px;
-}
-
-.container-formulario{
-    max-width: 350px;
-}
-
-}
-
-
