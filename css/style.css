@@ -819,7 +819,7 @@ select,
 /* Media query para pantallas menores de 500px (móviles) */
 @media (max-width: 500px) {
 .carousel-title1, .carousel-title2, .carousel-title3 {
-    font-size: 25px;
+    font-size: 23px;
     margin-bottom: 80px;
     padding-top: 60px;
 }
