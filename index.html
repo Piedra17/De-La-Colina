@@ -7,6 +7,7 @@
     <title>De La Colina</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 
@@ -133,7 +134,7 @@
                 <img src="imagenes/lading/tour de frutas landing.png" alt="">
                 <div class="texto-sobre-foto">
                     <h2 class="texto-prin-niña">Descubre el corazón de la tradición familiar</h2>
-                    <p class="texto niña">En el Tour ALMA 5, cada momento está diseñado para conectar a las <br>
+                    <p class="texto-niña">En el Tour ALMA 5, cada momento está diseñado para conectar a las <br>
                         personas, rodeados de naturaleza, historia y una experiencia inolvidable.<br>
                         Desde recorridos guiados por paisajes encantadores hasta actividades interactivas<br>
                         para todas las edades, este es el lugar perfecto para fortalecer lazos y<br>
@@ -229,28 +230,6 @@
   <h3 class="titulo-ubicacion">Ubicación: De la Colina Shop & Market</h3>
   <div id="map"></div>
 
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script>
-    const lat = 9.6451072;
-    const lng = -83.9155453;
-
-    const map = L.map('map').setView([lat, lng], 18);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
-
-    const marker = L.marker([lat, lng]).addTo(map);
-    marker.bindPopup('<a href="https://www.google.com/maps?q=9.6451072,-83.9155453" target="_blank">Ver en Google Maps</a>');
-
-    marker.on('click', function() {
-      window.open('https://www.google.com/maps?q=9.6451072,-83.9155453', '_blank');
-    });
-
-    map.on('click', function() {
-      window.open('https://www.google.com/maps?q=9.6451072,-83.9155453', '_blank');
-    });
-  </script>
 
 
 
@@ -334,6 +313,8 @@
 
 
     <script src="scripts/index.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="scripts/mapas.js"></script>
 
 </body>
 
