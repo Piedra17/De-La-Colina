@@ -435,6 +435,19 @@ p {
     color: #D94929;
 }
 
+/* mapa */
+    #map {
+        height: 500px;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    .titulo-ubicacion{
+        font-size: 30px;
+        text-align: center;
+        padding-top: 150px;
+    }
+
 
 /* formulario para mas info */
 /* formulario para más info */
@@ -805,148 +818,62 @@ select,
 
 /* Media query para pantallas menores de 500px (móviles) */
 @media (max-width: 500px) {
-
-    .logo img{
-        width: 150px;
-        height: auto;
-        
-    }
-
-    .menu-btn{
-        padding-top: 1px;
-    }
-
-    .navbar{
-        padding:  5px 5px;
-    }
-
-    .carousel-title1, .carousel-title2, .carousel-title3 {
-        font-size: 30px;
-        margin-bottom: 120px;
-    }
-
-   
-
-    /* Ajuste de la imagen del carrusel */
-    .carousel-item img {
-        height: 700px; /* Ajusta la altura de la imagen en pantallas pequeñas */
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .infotour-button {
-        background-color: #D94929;
-        color: #fff;
-        padding: 7px 15px;
-        border-radius: 20px;
-        font-size: 15px;
-        font-weight: bold;
-        transition: background-color 0.8s;
-    }
-
-
-
-
-    .navbar {
-        padding: 5px 5px;
-    }
-
-    .foto-chiquita img {
-        object-fit: cover;
-        height: 600px;  /* Reducir la altura de la imagen en pantallas muy pequeñas */
-    }
-
-    .texto-sobre-foto h2 {
-        font-size: 15px;  /* Reducir aún más el tamaño del título */
-    }
-
-    .texto-sobre-foto p {
-        font-size: 7px;  /* Reducir el tamaño del texto */
-    }
-
-    #productos-estrella h2 {
-        font-size: 20px;  /* Reducir tamaño de los títulos */
-        flex-wrap: wrap;
-    }
-
-    .productos {
-        gap: 15px;
-        padding-top: 20px;
-    }
-
-    .producto {
-        max-width: 300px; 
-        height: 300px; 
-    }
-
-    .producto img {
-        height: 300px;  
-    }
-
-    .foto-chiquita img {
-        object-fit: cover;
-        height: 500px;  /* Ajusta la altura de la imagen */
-    }
-
-
-.toggle-info {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background-color: green;
-    color: white;
-    border: none;
-    padding: 7px 15px;
-    font-size: 25px;  
-    border-radius: 20%;
-    cursor: pointer;
+.carousel-title1, .carousel-title2, .carousel-title3 {
+    font-size: 25px;
+    margin-bottom: 80px;
+    padding-top: 60px;
 }
 
-.info {
-    background: #9E9E9E;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    height: 300px;
-    text-align: left;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+.carousel-item img {
+    width: 100%;
+    height: 400px;  
+    object-fit: cover;
 }
 
-.info h3, .info h4 {
-    margin: 0 0 5px;
+
+
+p, .venta {
+    font-size: 16px;
 }
 
-.info h4{
-    font-size: 15px;
+.texto-sobre-foto,
+.texto-sobre-cafeteria {
+    width: 90%;
+    padding: 0 10px;
 }
 
-.info ul {
-    display: flex;
+.container-frutas,
+.container-cafeteria,
+.container-formulario {
+    margin-top: 100px;
+}
+
+.foto-cafeteria img {
+    max-height: 400px;
+    height: 800px;
+}
+
+.puntosventa-container,
+.productos,
+.footer-top {
     flex-direction: column;
-    justify-content: space-evenly;
-    padding-left: 5px;
-    margin: 0;
+    align-items: center;
 }
 
-.info ul li {
-    margin-bottom: 0px;
-    font-size: 10px;
+.producto-card {
+    width: 90%;
 }
 
-.info li{
-    padding: 0;
+#map {
+    width: 90%;
 }
 
-
-.info p {
-    font-size: 10px;
-    line-height: 1.5;
+.carousel-button,
+.infotour-button {
+    padding: 12px 20px;
+    font-size: 16px;
 }
+
 
 }
 
