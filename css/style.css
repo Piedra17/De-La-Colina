@@ -457,6 +457,13 @@ p {
     margin-top: 50px;
 }
 
+.container-formulario{
+    max-width: 1440px;
+    align-items: center;
+    padding-top: 150px;
+    margin: 0 auto;
+}
+
 input,
 select,
 .button-formulario {
