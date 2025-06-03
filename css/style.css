@@ -939,4 +939,8 @@ select,
         font-size: 15px;
         padding-top: 30px;
     }
+
+    h3.titulo-ubicacion{
+        font-size: 21px;
+    }
 }
