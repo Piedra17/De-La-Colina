@@ -7,9 +7,12 @@
     font-family: sans-serif;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
+    background-color: #faf3e0;
 }
+
 
 
 .navbar {
