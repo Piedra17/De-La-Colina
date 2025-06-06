@@ -603,8 +603,8 @@ ul .active li {
 
     .right-content{
         left: -90px;
-        max-width: 50%;
-        height: 400px;
+        max-width: 45%;
+        height: 500px;
     }
 
 
@@ -637,6 +637,7 @@ ul .active li {
 
     .video-container {
         height: 300px; /* Ajusta para que no sea muy largo en celulares */
+        padding-top: 50px;
     }
 
     .footer-nav {
