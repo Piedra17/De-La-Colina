@@ -292,7 +292,6 @@ p {
     text-align: center;
     padding-top: 100px;
 }
-
 .productos {
     padding-top: 100px;
     display: flex;
@@ -307,7 +306,7 @@ p {
 }
 
 .producto-card {
-    background: white;
+        background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -358,7 +357,7 @@ p {
     padding: 1rem;
     text-align: left;
     z-index: 2;
-    background-color: white;
+    background-color: #fceeca;;
 }
 
 .card-contenido h3 {
@@ -390,10 +389,13 @@ p {
 /* foto de cafeteria */
 
 .container-cafeteria {
-    margin-top: 300px;
+    padding-top: 400px;
     max-width: 1920px;
 }
 
+.a{
+    padding-top: 200px;
+}
 .foto-cafeteria {
     display: flex;
     align-items: center;
