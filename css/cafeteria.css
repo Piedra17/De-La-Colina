@@ -211,7 +211,7 @@ ul .active li {
     max-width: 1440px;
     height: 100%;
     margin: 0 auto;
-    padding-top: 400px;
+    padding-top: 100px;
 }
 
 .item {
@@ -222,16 +222,44 @@ ul .active li {
 
 .text-block {
     background-color: #fceeca;
-    padding: 30px;
+    padding: 150px 50px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     font-family: Arial, sans-serif;
     font-size: 18px;
-    color: #333;
     height: 500px;
 }
+
+
+.texto-hay {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 400px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+
+.whatsapp-btn {
+    margin-top: 1rem;
+    display: block;
+    background-color: #25D366;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: background 0.9s;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.whatsapp-btn:hover {
+    background-color: #fff;
+    color: #25D366;
+}
+
 
 
 
