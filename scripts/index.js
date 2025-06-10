@@ -170,8 +170,9 @@ function toggleInfo(index) {
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("formulario-contacto");
     const button = document.getElementById("enviar");
-    const inputs = form.querySelectorAll("input, select");
+    const inputs = form.querySelectorAll("input, select, textarea"); // Incluyo textarea aquí
 
+    // Función para validar el formulario y habilitar/deshabilitar el botón
     function validarFormulario() {
         let esValido = true;
 
@@ -190,10 +191,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Validación en tiempo real
+    // Agregar validación en tiempo real a inputs, selects y textarea
     inputs.forEach(input => {
         input.addEventListener("input", validarFormulario);
         input.addEventListener("change", validarFormulario);
+    });
+
+    // Contador de caracteres para el textarea
+    const textarea = document.getElementById("mensaje");
+    const contador = document.getElementById("contador-caracteres");
+
+    textarea.addEventListener("input", () => {
+        contador.textContent = `${textarea.value.length} / 250`;
     });
 
     // Evento al hacer clic en "Enviar"
@@ -216,15 +225,10 @@ document.addEventListener("DOMContentLoaded", function () {
             form.reportValidity();
         }
     });
+
+    // Ejecutar validación inicial para establecer estado correcto del botón
+    validarFormulario();
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const textarea = document.getElementById("mensaje");
-    const contador = document.getElementById("contador-caracteres");
-
-    textarea.addEventListener("input", () => {
-        contador.textContent = `${textarea.value.length} / 250`;
-    });
-});
 
 //FUNCION PARA MOVER A LA PAGINA DE INICIO CUANDO SE LE DA AL BOTON ENVIAR
