@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 esValido = false;
             }
         });
-    button.onclick = window.href = "index.html"
+
         if (esValido) {
             button.disabled = false;
             button.classList.add("enabled");
@@ -190,12 +190,33 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-
-
+    // Validación en tiempo real
     inputs.forEach(input => {
         input.addEventListener("input", validarFormulario);
         input.addEventListener("change", validarFormulario);
     });
+
+    // Evento al hacer clic en "Enviar"
+    button.addEventListener("click", function (e) {
+        e.preventDefault(); // Detiene el envío normal
+
+        if (form.checkValidity()) {
+            // Mostrar mensaje de éxito con SweetAlert
+            Swal.fire({
+                title: '¡Formulario enviado!',
+                text: 'Tu información fue enviada con éxito.',
+                icon: 'success',
+                confirmButtonText: 'Aceptar'
+            }).then(() => {
+                // Redirigir después de aceptar
+                window.location.href = "index.html";
+            });
+        } else {
+            // Mostrar validación del navegador
+            form.reportValidity();
+        }
+    });
 });
+
 
 //FUNCION PARA MOVER A LA PAGINA DE INICIO CUANDO SE LE DA AL BOTON ENVIAR

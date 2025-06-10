@@ -278,6 +278,15 @@
         <label for="telefono">Número de Teléfono</label>
         <input type="tel" id="telefono" name="telefono" placeholder="Escriba su número de teléfono" required>
 
+
+    <div class="campo-textarea">
+        <label for="mensaje">¿Tienes alguna duda o comentario?</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu duda o comentario (máx. 250 caracteres)" maxlength="250" required></textarea>
+    <div class="contador" id="contador-caracteres">0 / 250</div>
+    </div>
+
+
+
         <button type="submit" id="enviar" class="button-formulario" disabled>Enviar</button>
     </form>
     </section>
@@ -326,6 +335,8 @@
     <script src="scripts/index.js"></script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="scripts/mapas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 </body>
 
