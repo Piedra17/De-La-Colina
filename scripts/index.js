@@ -231,4 +231,5 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
 //FUNCION PARA MOVER A LA PAGINA DE INICIO CUANDO SE LE DA AL BOTON ENVIAR
