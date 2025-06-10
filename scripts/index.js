@@ -218,5 +218,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const textarea = document.getElementById("mensaje");
+    const contador = document.getElementById("contador-caracteres");
+
+    textarea.addEventListener("input", () => {
+        contador.textContent = `${textarea.value.length} / 250`;
+    });
+});
 
 //FUNCION PARA MOVER A LA PAGINA DE INICIO CUANDO SE LE DA AL BOTON ENVIAR
