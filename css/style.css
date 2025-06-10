@@ -13,6 +13,23 @@ body {
     background-color: #faf3e0;
 }
 
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25D366;
+    border-radius: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    color: #fff;
+    font-size: 40px;
+}
+.whatsapp-float:hover {
+    transform: scale(1.2);
+}
+
 
 .navbar {
     display: flex;
@@ -717,6 +734,24 @@ select,
         padding: 18px 28px;
         font-size: 18px;
     }
+
+    
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25D366;
+    border-radius: 100%;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    color: #fff;
+    font-size: 30px;
+}
+.whatsapp-float:hover {
+    transform: scale(1.2);
+}
 
 
 
