@@ -15,6 +15,9 @@ body {
 
 
 
+
+
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -452,6 +455,26 @@ ul .active li {
     ul li {
         display: block;  
     }
+
+
+
+
+    .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25D366;
+    border-radius: 100%;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    color: #fff;
+    font-size: 30px;
+}
+.whatsapp-float:hover {
+    transform: scale(1.2);
+}
     
 
 
