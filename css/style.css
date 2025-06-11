@@ -70,10 +70,36 @@ ul li {
 }
 
 li a {
+    position: relative;
     color: #fff;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 23px;
+    font-weight: 600;
+    text-decoration: none;
+    padding-bottom: 5px;
 }
+
+li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #FF6b00;
+    transition: width 1.2s ease;
+    /* velocidad lenta */
+}
+
+li a:hover::after {
+    width: 100%;
+    /* Se extiende al hacer hover */
+}
+
+li a:hover {
+    color: #75c365b1;
+}
+
+
 
 ul .active li {
     display: inline-block;
