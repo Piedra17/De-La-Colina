@@ -235,6 +235,7 @@ header {
     padding-top: 60px;
     font-size: 36px;
     text-align: center;
+    color: #fff;
 }
 
 .puntosventa-container {
@@ -406,18 +407,19 @@ p {
     padding: 1rem;
     text-align: left;
     z-index: 2;
-    background-color: #fceeca;;
+    color: white;
+    background-color: #0A291A;
 }
 
 .card-contenido h3 {
     margin-top: 0;
-    color: #333;
+    color: white;
 }
 
 .whatsapp-btn {
     margin-top: 1rem;
     display: block;
-    background-color: #25D366;
+    background-color: #1d7246;
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 8px;
