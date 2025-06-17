@@ -229,6 +229,10 @@ header {
 }
 
 
+
+
+
+
 /* Puntos de venta */
 
 .venta {
@@ -795,14 +799,6 @@ select,
 
     ul li {
         display: block;
-    }
-
-    .carousel-prev {
-        display: none;
-    }
-
-    .carousel-next {
-        display: none;
     }
 
     .carousel-button {
