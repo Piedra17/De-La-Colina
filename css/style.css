@@ -16,7 +16,7 @@ body {
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 20px;
     z-index: 1000;
     background-color: #25D366;
     width: 64px;
@@ -25,15 +25,44 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
     color: #fff;
     font-size: 32px;
     text-decoration: none;
 }
+
 .whatsapp-float:hover {
     transform: scale(1.2);
 }
+
+
+/* flecha */
+
+.boton-redondo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a746;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s;
+    z-index: 1000;
+}
+
+.boton-redondo:hover {
+    background-color: #25D366;
+}
+
 
 
 
@@ -176,7 +205,7 @@ header {
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    transition: background-color 2s;
+    transition: background-color 0.8s;
 }
 
 .carousel-button:hover {
@@ -250,7 +279,7 @@ header {
 .fotos-puntosventa {
     padding-top: 130px;
     display: flex;
-    gap: 20px;
+    gap: 50px;
     /* Reducir espacio entre fotos */
     flex-wrap: wrap;
 }
@@ -258,13 +287,14 @@ header {
 .fotos-venta {
     flex: 1 1 100%;
     /* Deja que las imágenes se ajusten */
-    max-width: 150px;
+    max-width: 220px;
+    max-height: 220px;
     text-align: center;
 }
 
 .fotos-venta img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 
@@ -345,6 +375,7 @@ p {
     text-align: center;
     padding-top: 100px;
 }
+
 .productos {
     padding-top: 100px;
     display: flex;
@@ -359,7 +390,7 @@ p {
 }
 
 .producto-card {
-        background-color: #fff;
+    background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -447,9 +478,10 @@ p {
     max-width: 1920px;
 }
 
-.a{
+.a {
     padding-top: 200px;
 }
+
 .foto-cafeteria {
     display: flex;
     align-items: center;
@@ -596,7 +628,7 @@ select,
     font-size: 1rem;
     line-height: 1.5;
     font-family: 'Arial', sans-serif;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s;
 }
 
@@ -805,7 +837,7 @@ select,
         font-size: 18px;
     }
 
-    
+
 
 
 
@@ -892,7 +924,7 @@ select,
     }
 
 
-    h2.texto-prin-cafeteria{
+    h2.texto-prin-cafeteria {
         font-size: 27px;
     }
 
@@ -1026,7 +1058,7 @@ select,
         padding-top: 100px;
     }
 
-        h2.texto-prin-cafeteria{
+    h2.texto-prin-cafeteria {
         font-size: 25px;
     }
 
@@ -1035,7 +1067,7 @@ select,
         padding-top: 30px;
     }
 
-    h3.titulo-ubicacion{
+    h3.titulo-ubicacion {
         font-size: 21px;
     }
 }

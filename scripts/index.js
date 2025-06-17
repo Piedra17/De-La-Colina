@@ -71,6 +71,28 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// Mostrar botón solo cuando el usuario ha bajado del banner
+window.addEventListener("scroll", function () {
+    const boton = document.getElementById("boton-arriba");
+    const banner = document.getElementById("banner");
+    const bannerBottom = banner.offsetTop + banner.offsetHeight;
+
+    if (window.scrollY > bannerBottom) {
+        boton.style.display = "block";
+    } else {
+        boton.style.display = "none";
+    }
+});
+
+// Scroll suave al hacer clic
+document.getElementById("boton-arriba").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.getElementById("banner").scrollIntoView({
+        behavior: "smooth"
+    });
+});
+
+
 
 
 function toggleInfo(index) {
@@ -166,3 +188,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //FUNCION PARA MOVER A LA PAGINA DE INICIO CUANDO SE LE DA AL BOTON ENVIAR
+
+
+
+
+
