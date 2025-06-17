@@ -1,149 +1,74 @@
-const menuButton = document.querySelector('.menu');
-const ulMenu = document.querySelector('ul');
-const btnEnviar = document.querySelector('.button-formulario');
-
-menuButton.addEventListener('click', () => {
-    ulMenu.classList.toggle('active');
-});
-
-
 document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.carousel');
     const items = document.querySelectorAll('.carousel-item');
     const dots = document.querySelectorAll('.dot');
     const prevButton = document.querySelector('.carousel-prev');
     const nextButton = document.querySelector('.carousel-next');
     let currentIndex = 0;
 
-    // Función para cambiar la imagen activa
-    function updateCarousel() {
-        const offset = -currentIndex * 100; // Desplazamiento en porcentaje
-        document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+    function updateCarousel(index) {
+        const offset = -index * 100;
+        carousel.style.transform = `translateX(${offset}%)`;
 
-        // Actualizar los puntos
         dots.forEach(dot => dot.classList.remove('active'));
-        dots[currentIndex].classList.add('active');
+        dots[index].classList.add('active');
     }
 
-    // Función para mover al siguiente slide
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % items.length;
-        updateCarousel();
-    }
-
-    // Función para mover al slide anterior
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + items.length) % items.length;
-        updateCarousel();
-    }
-
-    // Iniciar el carrusel con un intervalo automático
-    let autoSlide = setInterval(nextSlide, 5000);
-
-    // Agregar eventos a las flechas
-    nextButton.addEventListener('click', () => {
-        clearInterval(autoSlide);
-        nextSlide();
-        autoSlide = setInterval(nextSlide, 5000);
-    });
-
+    // Flechas
     prevButton.addEventListener('click', () => {
-        clearInterval(autoSlide);
-        prevSlide();
-        autoSlide = setInterval(nextSlide, 5000);
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        updateCarousel(currentIndex);
     });
 
-    // Agregar eventos a los puntos
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateCarousel(currentIndex);
+    });
+
+    // Dots
     dots.forEach((dot, index) => {
+        dot.setAttribute('data-index', index); // Por si acaso
         dot.addEventListener('click', () => {
             currentIndex = index;
-            updateCarousel();
+            updateCarousel(currentIndex);
         });
     });
 
-    updateCarousel();
+    updateCarousel(currentIndex); // Inicializa
+
+    // TOUCH (solo si pantalla es 768px o menor)
+    if (window.innerWidth <= 768) {
+        let startX = 0;
+        let isDragging = false;
+
+        carousel.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+        });
+
+        carousel.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const moveX = e.touches[0].clientX;
+            const diff = startX - moveX;
+
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    // Desliza a la izquierda
+                    currentIndex = (currentIndex + 1) % items.length;
+                } else {
+                    // Desliza a la derecha
+                    currentIndex = (currentIndex - 1 + items.length) % items.length;
+                }
+                updateCarousel(currentIndex);
+                isDragging = false;
+            }
+        });
+
+        carousel.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+    }
 });
-
-
-// esto es para deslizar en tamaño de tablet hacia abajo
-
-const carousel = document.querySelector('.carousel');
-const dots = document.querySelectorAll('.dot');
-let isDown = false;
-let startX;
-let scrollLeft;
-
-function updateDots() {
-    const scrollPosition = carousel.scrollLeft;
-    const carouselWidth = carousel.offsetWidth;
-    const totalItems = carousel.children.length;
-    const itemWidth = carouselWidth / totalItems;
-    const currentIndex = Math.round(scrollPosition / itemWidth);
-    dots.forEach((dot, index) => {
-        dot.classList.remove('active');
-        if (index === currentIndex) {
-            dot.classList.add('active');
-        }
-    });
-}
-
-if (window.innerWidth <= 1280) {
-    // Activar deslizamiento solo si el ancho de la pantalla es 1280px o menos
-    carousel.addEventListener('mousedown', (e) => {
-        isDown = true;
-        startX = e.pageX - carousel.offsetLeft;
-        scrollLeft = carousel.scrollLeft;
-    });
-
-    carousel.addEventListener('mouseleave', () => {
-        isDown = false;
-    });
-
-    carousel.addEventListener('mouseup', () => {
-        isDown = false;
-        updateDots();  // Actualiza los puntos después de detener el deslizamiento
-    });
-
-    carousel.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - carousel.offsetLeft;
-        const walk = (x - startX) * 2;  // Ajusta el factor de "caminar" si es necesario
-        carousel.scrollLeft = scrollLeft - walk;
-    });
-
-    let touchStartX = 0;
-    let touchStartScroll = 0;
-
-    carousel.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-        touchStartScroll = carousel.scrollLeft;
-    });
-
-    carousel.addEventListener('touchmove', (e) => {
-        const touchMoveX = e.touches[0].clientX;
-        const walk = (touchMoveX - touchStartX) * 2;  // Ajusta el factor de "caminar" si es necesario
-        carousel.scrollLeft = touchStartScroll - walk;
-    });
-
-    carousel.addEventListener('touchend', () => {
-        updateDots();  // Actualiza los puntos después de detener el deslizamiento
-    });
-
-    // Función para navegar al carrusel al hacer clic en los puntos
-    dots.forEach(dot => {
-        dot.addEventListener('click', (e) => {
-            const index = parseInt(e.target.getAttribute('data-index'));
-            const targetItem = carousel.children[index];
-            carousel.scrollTo({
-                left: targetItem.offsetLeft,
-                behavior: 'smooth'
-            });
-        });
-    });
-}
-
-// Para actualizar los puntos de navegación al cargar la página
-window.addEventListener('load', updateDots);
 
 
 
