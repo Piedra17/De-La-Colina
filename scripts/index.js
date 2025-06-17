@@ -86,6 +86,14 @@ function toggleInfo(index) {
 }
 
 
+const menuButton = document.querySelector('.menu-btn'); // Arreglado
+const ulMenu = document.querySelector('.opciones');     // Arreglado
+
+menuButton.addEventListener('click', () => {
+    ulMenu.classList.toggle('active');
+});
+
+
 
 
 
