@@ -191,7 +191,6 @@ header {
     transform: translateY(-50%);
     font-size: 2rem;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     cursor: pointer;
     z-index: 1;
@@ -928,9 +927,12 @@ select,
     .carousel-title1,
     .carousel-title2,
     .carousel-title3 {
-        font-size: 23px;
+        font-size: 22px;
         margin-bottom: 80px;
         padding-top: 60px;
+        max-width: 350px;
+        height: 250px;
+        margin: 0 auto;
     }
 
     .carousel-item img {
