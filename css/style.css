@@ -590,6 +590,7 @@ p {
     font-size: 30px;
     text-align: center;
     padding-top: 150px;
+    color: #fff;
 }
 
 
@@ -602,16 +603,17 @@ p {
 .texto-formulario {
     font-size: 30px;
     text-align: center;
+    color: #fff;
 }
 
 .contact-from {
     max-width: 400px;
     margin: auto;
-    background: #f9f9f9;
+    background: #FAF3E0;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .container-formulario {
@@ -619,6 +621,7 @@ p {
     align-items: center;
     padding-top: 150px;
     margin: 0 auto;
+    font-weight: 600;
 }
 
 input,
