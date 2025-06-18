@@ -6,13 +6,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.querySelector('.carousel-next');
     let currentIndex = 0;
 
-    function updateCarousel(index) {
-        const offset = -index * 100;
-        carousel.style.transform = `translateX(${offset}%)`;
+    let previousIndex = 0;
 
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[index].classList.add('active');
-    }
+function updateCarousel(index) {
+    const offset = -index * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+
+    items.forEach((item, i) => {
+        item.classList.remove('active', 'left', 'right');
+        if (i === index) {
+            item.classList.add('active');
+
+            // Detectar dirección de movimiento
+            if (index > previousIndex || (previousIndex === items.length - 1 && index === 0)) {
+                item.classList.add('right'); // Viene desde la derecha
+            } else {
+                item.classList.add('left'); // Viene desde la izquierda
+            }
+        }
+    });
+
+    previousIndex = index;
+}
+
 
     // Flechas
     prevButton.addEventListener('click', () => {
@@ -27,17 +46,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dots
     dots.forEach((dot, index) => {
-        dot.setAttribute('data-index', index); // Por si acaso
+        dot.setAttribute('data-index', index);
         dot.addEventListener('click', () => {
             currentIndex = index;
             updateCarousel(currentIndex);
         });
     });
 
-    updateCarousel(currentIndex); // Inicializa
+    // Inicializa
+    updateCarousel(currentIndex);
 
-    // TOUCH (solo si pantalla es 768px o menor)
-    if (window.innerWidth <= 768) {
+    // Touch para móviles
+    if (window.innerWidth <= 1280) {
         let startX = 0;
         let isDragging = false;
 
@@ -53,10 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (Math.abs(diff) > 50) {
                 if (diff > 0) {
-                    // Desliza a la izquierda
                     currentIndex = (currentIndex + 1) % items.length;
                 } else {
-                    // Desliza a la derecha
                     currentIndex = (currentIndex - 1 + items.length) % items.length;
                 }
                 updateCarousel(currentIndex);
@@ -69,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
 
 
 // Mostrar botón solo cuando el usuario ha bajado del banner
@@ -87,7 +106,7 @@ window.addEventListener("scroll", function () {
 // Scroll suave al hacer clic
 document.getElementById("boton-arriba").addEventListener("click", function (e) {
     e.preventDefault();
-    document.getElementById("banner").scrollIntoView({
+    document.getElementById("nav").scrollIntoView({
         behavior: "smooth"
     });
 });

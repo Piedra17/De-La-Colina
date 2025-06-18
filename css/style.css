@@ -47,9 +47,8 @@ body {
     color: white;
     border: none;
     border-radius: 50%;
-    width: 64px;
-    padding-top: 6px;
-    height: 64px;
+    width: 50px;
+    height: 50px;
     font-size: 24px;
     text-align: center;
     align-items: center;
@@ -260,6 +259,44 @@ header {
 
 
 
+.carousel-item.active .carousel-overlay {
+    opacity: 1;
+}
+
+.carousel-item.active.right .carousel-overlay {
+    animation: slideInRight 2s ease forwards;
+}
+
+.carousel-item.active.left .carousel-overlay {
+    animation: slideInLeft 2s ease forwards;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translate(-50%, -50%) translateX(600px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translate(-50%, -50%) translateX(-600px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
 
 
 
@@ -269,7 +306,6 @@ header {
     padding-top: 60px;
     font-size: 36px;
     text-align: center;
-    color: #fff;
 }
 
 .puntosventa-container {
@@ -279,7 +315,7 @@ header {
 }
 
 .fotos-puntosventa {
-    padding-top: 130px;
+    padding-top: 80px;
     display: flex;
     gap: 50px;
     /* Reducir espacio entre fotos */
@@ -303,7 +339,7 @@ header {
 /* foto de banner chiquita */
 
 .container-frutas {
-    margin-top: 300px;
+    margin-top: 200px;
     max-width: 1920px;
     width: 100%;
     margin-left: auto;
@@ -742,51 +778,6 @@ select,
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* Media query para pantallas de 1440px */
-@media (max-width: 1440px) {
-
-    .carousel-title1,
-    .carousel-title2,
-    .carousel-title3 {
-        font-size: 60px;
-        margin-bottom: 180px;
-    }
-
-    .carousel-button {
-        padding: 18px 28px;
-        font-size: 18px;
-    }
-}
-
-/* Media query para pantallas de 1280px */
-@media (max-width: 1280px) {
-
-    .carousel-title1,
-    .carousel-title2,
-    .carousel-title3 {
-        font-size: 50px;
-        margin-bottom: 160px;
-    }
-
-    .carousel-button {
-        padding: 15px 25px;
-        font-size: 16px;
-    }
-}
-
-
-
 @media (max-width: 1280px) {
     .menu {
         display: block;
@@ -867,6 +858,127 @@ select,
     .dot.active {
         background-color: #fff;
     }
+
+
+
+    .carousel-title1,
+    .carousel-title2,
+    .carousel-title3 {
+        font-size: 26px;
+        margin-bottom: 70px;
+        padding-top: 60px;
+        max-width: 500px;
+        height: 250px;
+        margin: 0 auto;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 800px;
+        object-fit: cover;
+    }
+
+
+    
+    .venta,
+    .texto-prin-niña {
+        font-size: 27px;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .texto-niña {
+        font-size: 25px;
+    }
+
+    .texto-sobre-foto,
+    .texto-sobre-cafeteria {
+        width: 90%;
+        padding: 0 10px;
+    }
+
+    .container-frutas,
+    .container-cafeteria,
+    .container-formulario {
+        margin-top: 100px;
+    }
+
+    .foto-cafeteria img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+
+    .puntosventa-container,
+    .productos,
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .footer-nav {
+        max-width: 100px;
+    }
+
+    .footer-nav a {
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .producto-card {
+        width: 90%;
+    }
+
+    #map {
+        width: 90%;
+    }
+
+    .texto-formulario {
+        font-size: 23px;
+    }
+
+    .container-formulario {
+        padding: 10px;
+        max-width: 350px;
+    }
+
+    .carousel-button,
+    .infotour-button {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 0;
+        margin-top: 100px;
+    }
+
+    .foto-chiquita img {
+        height: 800px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    p.texto-niña {
+        font-size: 25px;
+    }
+
+    h2.texto-prin-cafeteria {
+        font-size: 25px;
+    }
+
+    .texto-sobre-foto p {
+        font-size: 15px;
+        padding-top: 30px;
+    }
+
+    h3.titulo-ubicacion {
+        font-size: 21px;
+    }
+
 
 }
 
@@ -977,11 +1089,13 @@ select,
 
     .venta,
     .texto-prin-niña {
-        font-size: 23px;
+        font-size: 27px;
+        max-width: 300px;
+        margin: 0 auto;
     }
 
     .texto-niña {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .texto-sobre-foto,
