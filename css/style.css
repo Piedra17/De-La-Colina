@@ -13,6 +13,10 @@ body {
     background-color: #7e965ed0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
