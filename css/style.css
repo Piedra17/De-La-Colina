@@ -596,6 +596,16 @@ p {
 
 /* formulario para mas info */
 /* formulario para más info */
+
+input, select, textarea {
+    background-color: #FAF3E0;
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    background-color: #FAF3E0;
+}
+
 .container-formulario {
     margin-top: 300px;
 }
@@ -609,9 +619,8 @@ p {
 .contact-from {
     max-width: 400px;
     margin: auto;
-    background: #FAF3E0;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 1px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin-top: 70px;
 }
@@ -641,11 +650,19 @@ select,
     color: white;
     cursor: not-allowed;
     border: none;
+    width: 30%;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
 }
 
 /* Botón activado dinámicamente con JavaScript */
 .button-formulario.enabled {
-    background: #28a745;
+    background: #263A0A;
     color: white;
     cursor: pointer;
     transition: background 0.3s ease;
@@ -679,10 +696,6 @@ select,
     transition: border-color 0.3s;
 }
 
-.campo-textarea textarea:focus {
-    border-color: #25D366;
-    outline: none;
-}
 
 .contador {
     font-size: 0.875rem;
@@ -726,15 +739,22 @@ select,
     margin: 5px;
 }
 
+.footer-nav a:hover{
+    color: #75c365b1;
+}
+
+
 .footer-nav a::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: 0;
     height: 2px;
-    background-color: white;
-    transition: width 100s ease-in-out;
+    width: 0%;
+    background-color: #FF6b00;
+    transition: width 1.2s;
 }
+
 
 .footer-nav a:hover::after {
     width: 100%;

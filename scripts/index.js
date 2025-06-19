@@ -57,7 +57,7 @@ function updateCarousel(index) {
     updateCarousel(currentIndex);
 
     // Touch para móviles
-    if (window.innerWidth <= 1280) {
+    if (window.innerWidth <= 768) {
         let startX = 0;
         let isDragging = false;
 
@@ -206,7 +206,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-//FUNCION PARA MOVER A LA PAGINA DE INICIO CUANDO SE LE DA AL BOTON ENVIAR
 
 
 
