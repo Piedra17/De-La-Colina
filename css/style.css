@@ -10,15 +10,25 @@
 body {
     overflow-x: hidden;
     background-color: #7e965ed0;
-    background-image: url('../imagenes/svg/svgprueba.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+}
+
+.svg-fondo {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../imagenes/svg/svgprueba.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  pointer-events: none;
 }
 
 html{
     scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
 }
 
 
@@ -814,6 +824,7 @@ select,
 
 
 @media (max-width: 1280px) {
+
     .menu {
         display: block;
     }
@@ -1020,6 +1031,11 @@ select,
 
 /* Media query para pantallas de 768px */
 @media (max-width: 768px) {
+    .svg-fondo {
+        background-size: contain;
+        background-position: center center;
+        height: 100vh;
+    }
     .navbar {
         padding: 5px 10px;
     }
