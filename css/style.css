@@ -7,15 +7,21 @@
     font-family: sans-serif;
 }
 
-html,
 body {
     overflow-x: hidden;
     background-color: #7e965ed0;
+    background-image: url('../imagenes/svg/svgprueba.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 html{
     scroll-behavior: smooth;
 }
+
+
 
 .whatsapp-float {
     position: fixed;
