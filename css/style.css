@@ -13,19 +13,20 @@ body {
 }
 
 .svg-fondo {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url('../imagenes/svg/svgprueba.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-  pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../imagenes/svg/svgprueba.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    pointer-events: none;
 }
 
-html{
+html {
     scroll-behavior: smooth;
     height: 100%;
     margin: 0;
@@ -296,6 +297,7 @@ header {
         transform: translate(-50%, -50%) translateX(600px);
         opacity: 0;
     }
+
     100% {
         transform: translate(-50%, -50%) translateX(0);
         opacity: 1;
@@ -307,6 +309,7 @@ header {
         transform: translate(-50%, -50%) translateX(-600px);
         opacity: 0;
     }
+
     100% {
         transform: translate(-50%, -50%) translateX(0);
         opacity: 1;
@@ -321,7 +324,6 @@ header {
 
 
 /* Puntos de venta */
-
 .venta {
     padding-top: 60px;
     font-size: 36px;
@@ -329,38 +331,62 @@ header {
     color: #fff;
 }
 
+/* Contenedor principal */
 .puntosventa-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.fotos-puntosventa {
-    padding-top: 80px;
-    display: flex;
-    gap: 50px;
-    /* Reducir espacio entre fotos */
-    flex-wrap: wrap;
+.informacion-puntosventa {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
 }
 
+/* Carrusel */
+.carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    padding-top: 60px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    animation: scrollCarousel 30s linear infinite;
+}
+
+/* Cada imagen del carrusel */
 .fotos-venta {
-    flex: 1 1 100%;
-    /* Deja que las imágenes se ajusten */
-    max-width: 220px;
-    max-height: 220px;
-    text-align: center;
+    flex: 0 0 auto;
+    width: 180px;
+    height: 180px;
 }
 
 .fotos-venta img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
+
+/* Animación */
+@keyframes scrollCarousel {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 
 
 /* foto de banner chiquita */
 
 .container-frutas {
-    margin-top: 200px;
+    margin-top: 300px;
     max-width: 1920px;
     width: 100%;
     margin-left: auto;
@@ -613,12 +639,16 @@ p {
 /* formulario para mas info */
 /* formulario para más info */
 
-input, select, textarea {
+input,
+select,
+textarea {
     background-color: #FAF3E0;
     outline: none;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
     background-color: #FAF3E0;
 }
 
@@ -642,7 +672,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .container-formulario {
-    max-width: 1440px;
+    max-width: 900px;
     align-items: center;
     padding-top: 150px;
     margin: 0 auto;
@@ -755,7 +785,7 @@ select,
     margin: 5px;
 }
 
-.footer-nav a:hover{
+.footer-nav a:hover {
     color: #75c365b1;
 }
 
@@ -925,7 +955,7 @@ select,
     }
 
 
-    
+
     .venta,
     .texto-prin-niña {
         font-size: 27px;
@@ -1032,10 +1062,11 @@ select,
 /* Media query para pantallas de 768px */
 @media (max-width: 768px) {
     .svg-fondo {
-        background-size: contain;
+        background-size: auto;
         background-position: center center;
-        height: 100vh;
+        height: 1000px;
     }
+
     .navbar {
         padding: 5px 10px;
     }
@@ -1063,18 +1094,7 @@ select,
 
 
 
-    .fotos-puntosventa {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-    }
 
-    .fotos-venta {
-        flex: 1 1 100%;
-        /* 1 imagen por fila */
-        max-width: 200px;
-        /* Limitar el tamaño máximo de las imágenes */
-    }
 
 
     .container-frutas {
