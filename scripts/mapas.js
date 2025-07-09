@@ -2,8 +2,13 @@
     const lng = -83.9155453;
 
     const map = L.map('map', {
-        scrollWheelZoom: false 
-    }).setView([lat, lng], 18);
+    scrollWheelZoom: false,
+    dragging: false,
+    touchZoom: false,
+    boxZoom: false,
+    keyboard: false,
+}).setView([lat, lng], 18);
+
 
 
     // Estilos base
