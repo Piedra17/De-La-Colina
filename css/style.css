@@ -32,6 +32,22 @@ html {
     margin: 0;
 }
 
+/*rotar*/
+@keyframes rotarIcono {
+    0% {
+        transform: rotate(0deg) scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotate(180deg) scale(1.2);
+        opacity: 1;
+    }
+}
+
+.animar-icono {
+    animation: rotarIcono 0.4s ease;
+}
+
 
 
 .whatsapp-float {
@@ -623,7 +639,7 @@ p {
 /* mapa */
 #map {
     height: 500px;
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
     margin-top: 50px;
 }

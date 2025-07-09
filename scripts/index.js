@@ -126,16 +126,23 @@ function toggleInfo(index) {
     });
 }
 
-
-const menuButton = document.querySelector('.menu-btn'); // Arreglado
-const ulMenu = document.querySelector('.opciones');     // Arreglado
+//menu con touche 
+const menuButton = document.querySelector('.menu-btn');
+const ulMenu = document.querySelector('.opciones');
+const icon = menuButton.querySelector('i');
 
 menuButton.addEventListener('click', () => {
     ulMenu.classList.toggle('active');
+
+    if (ulMenu.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times', 'animar-icono'); // Agrega animación
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+        icon.classList.remove('animar-icono'); // Remueve animación al cerrar
+    }
 });
-
-
-
 
 
 
@@ -205,6 +212,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+//pausa del carrucel
+  const track = document.querySelector('.carousel-track');
+  track.addEventListener('mouseenter', () => {
+    track.style.animationPlayState = 'paused';
+  });
+  track.addEventListener('mouseleave', () => {
+    track.style.animationPlayState = 'running';
+  });
 
 
 

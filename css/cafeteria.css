@@ -7,12 +7,83 @@
     font-family: sans-serif;
 }
 
-html,
 body {
     overflow-x: hidden;
-    background-color: #faf3e0;
+    background-color: #7e965ed0;
 }
 
+.svg-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../imagenes/svg/svgprueba.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    pointer-events: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+}
+
+
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    background-color: #25D366;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    color: #fff;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.2);
+}
+
+
+/* flecha */
+
+.boton-redondo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a746;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    align-items: center;
+    line-height: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s;
+    z-index: 1000;
+}
+
+.boton-redondo:hover {
+    background-color: #25D366;
+}
 
 
 
@@ -50,10 +121,36 @@ ul li {
 }
 
 li a {
+    position: relative;
     color: #fff;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 23px;
+    font-weight: 600;
+    text-decoration: none;
+    padding-bottom: 5px;
 }
+
+li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #FF6b00;
+    transition: width 1.2s ease;
+    /* velocidad lenta */
+}
+
+li a:hover::after {
+    width: 100%;
+    /* Se extiende al hacer hover */
+}
+
+li a:hover {
+    color: #75c365b1;
+}
+
+
 
 ul .active li {
     display: inline-block;
@@ -74,7 +171,6 @@ ul .active li {
     color: #fff;
     padding-top: 10px;
 }
-
 /* banner principal */
 
 .Banner-principal {
@@ -236,11 +332,11 @@ ul .active li {
 
 
 .texto-hay {
-    font-size: 32px;
+    font-size: 40px;
     text-align: center;
     margin-top: 400px;
     font-family: Arial, sans-serif;
-    color: #333;
+    color: #fff;
 }
 
 
@@ -261,6 +357,26 @@ ul .active li {
     background-color: #fff;
     color: #25D366;
 }
+
+.parallax {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.2s ease-in-out;
+}
+
+.from-right {
+    transform: translateY(-300px);
+}
+
+.from-left {
+    transform: translateY(200px);
+}
+
+.parallax.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
 
 
 

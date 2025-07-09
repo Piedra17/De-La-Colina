@@ -1,7 +1,10 @@
-        const lat = 9.6451072;
+    const lat = 9.6451072;
     const lng = -83.9155453;
 
-    const map = L.map('map').setView([lat, lng], 18);
+    const map = L.map('map', {
+        scrollWheelZoom: false 
+    }).setView([lat, lng], 18);
+
 
     // Estilos base
     const openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
