@@ -1077,19 +1077,19 @@ select,
 
 /* Media query para pantallas de 768px */
 @media (max-width: 768px) {
-    .svg-fondo {
+     .svg-fondo {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 150vh;
-    background-image: url('../imagenes/svg/svgprueba.svg');
+    height: 50vh; /* o incluso 200vh para más verticalidad */
+    background-image: url('../imagenes/svg/svg2.svg');
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center;
-    z-index: -1;
+    background-position: center top;
+    background-size:  cover; /* o probar 100% 150% */
     pointer-events: none;
-}
+    z-index: -1;
+  }
 
 
     .navbar {
