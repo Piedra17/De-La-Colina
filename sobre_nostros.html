@@ -7,7 +7,7 @@
     <!-- GLightbox CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/galeria.css">
+    <link rel="stylesheet" href="css/sobre.nosotros.css">
 </head>
 <body>
     <div class="svg-fondo"></div>
@@ -41,61 +41,42 @@
 
         <section class="Banner-principal">
             <article class="contenido-principal">
-                <img src="imagenes/nosotros/manzanas.png" alt=""Banner-principal de productos>
+                <img src="imagenes/nosotros/creadores.png" alt=""Banner-principal de productos>
             </article>
             <div class="banner-texto">
-                <h1>"Galería de emociones y recuerdos... que solo se viven en De La Colina."</h1>
+                <h1>"Descubre quiénes somos el como empeso DE LA Colina."</h1>
             </div>
         </section>
 
+    <!-- Sección Sobre Nosotros -->
+    <section class="sobre-nosotros">
+        <div class="contenedor-sobre">
+            <h2>Sobre Nosotros</h2>
+            <p>
+                En <strong>De La Colina CR</strong> creemos en la conexión entre la naturaleza, la tradición y la comunidad. Somos una finca familiar ubicada en la zona rural de Costa Rica, donde cultivamos frutas frescas, producimos café artesanal y ofrecemos experiencias únicas a nuestros visitantes.
+            </p>
+            <p>
+                Nuestro propósito es crear momentos memorables a través de nuestros toures, cafetería y productos naturales, siempre comprometidos con la sostenibilidad, la calidad y el amor por nuestra tierra. Cada rincón de De La Colina está lleno de historia, cultura y sabor auténtico costarricense.
+            </p>
+        </div>
+    </section>
 
 
 
-        <!-- Galeria -->
-         <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 30px; color: #fff; margin-top: 100px;">
-                Galería de nuestro tour
-            </h2>
-        <section class="galeria">
-            <div class="galeria-item">
-                <a href="imagenes/galeria/niñatour.png" class="glightbox" data-gallery="galeria1">
-                    <img src="imagenes/galeria/niñatour.png"  alt="Imagen 1">
-                </a>
-                <a href="imagenes/galeria/niñatour.png"  download class="descargar">
-                    <i class="fas fa-download"></i> Descargar
-                </a>
-            </div>
+            <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/50688853533?text=Hola%2C%20quiero%20más%20información%20sobre%20tus%20productos" 
+    target="_blank" 
+    class="whatsapp-float" 
+    aria-label="Consultar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    </a>
 
-            <div class="galeria-item">
-                <a href="imagenes/galeria/tour de frutas landing.png" class="glightbox" data-gallery="galeria1">
-                    <img src="imagenes/galeria/tour de frutas landing.png" alt="Imagen 2">
-                </a>
-                <a href="imagenes/galeria/tour de frutas landing.png" download class="descargar">
-                    <i class="fas fa-download"></i> Descargar
-                </a>
-            </div>
-
-            <div class="galeria-item">
-                <a href="imagenes/galeria/tour.JPG" class="glightbox" data-gallery="galeria1">
-                    <img src="imagenes/galeria/tour.JPG" alt="Imagen 2">
-                </a>
-                <a href="imagenes/galeria/tour.JPG" download class="descargar">
-                    <i class="fas fa-download"></i> Descargar
-                </a>
-            </div>
-        </section>
+    <a href="#banner" id="boton-arriba" class="boton-redondo" title="Volver arriba">
+        <i class="fa-solid fa-chevron-up"></i>
+</a>
 
 
-                <!-- Botón flotante de WhatsApp -->
-            <a href="https://wa.me/50688853533?text=Hola%2C%20quiero%20más%20información%20sobre%20tus%20productos" 
-            target="_blank" 
-            class="whatsapp-float" 
-            aria-label="Consultar por WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-            </a>
 
-            <a href="#banner" id="boton-arriba" class="boton-redondo" title="Volver arriba">
-                <i class="fa-solid fa-chevron-up"></i>
-        </a>
 
 
 
@@ -134,7 +115,6 @@
 
 
         <!-- GLightbox JS -->
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script src="scripts/index.js"></script>
 
     <script>
@@ -158,17 +138,6 @@
         });
 
 
-
-
-
-
-    const lightbox = GLightbox({
-        touchNavigation: true,
-        loop: true,
-        zoomable: true,
-        openEffect: 'zoom',
-        closeEffect: 'fade'
-    });
 </script>
 
 
