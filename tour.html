@@ -11,27 +11,33 @@
 
 <body>
 
-    <header>
-        <nav class="navbar">
+<div class="svg-fondo"></div>
+        <header>
+            <nav class="navbar morphing-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="imagenes/logo y menu/logo.png" alt="logo de la colina">
+            </a>
+        </div>
 
-            <div class="logo">
-                <a href="index.html"><img src="imagenes/logo y menu/logo.png" alt="logo de la colina"></a>
-            </div>
+        <ul class="opciones">
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="cafeteria.html">Cafetería</a></li>
+            <li><a href="tour.html">Tour</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+        </ul>
 
-            <ul class="opciones">
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="cafeteria.html">Cafetería</a></li>
-                <li><a href="tour.html">Tour</a></li>
-                <li><a href="#"> Sobre Nosotros</a></li>
-                
-            </ul>
+        <div class="menu">
+            <button class="menu-btn" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
 
-            <div class="menu">
-                <button class="menu-btn" aria-label="Abrir menú">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </nav>
+        <!-- Este overlay va dentro del body, pero fuera del nav -->
+    </nav>
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+        
 
         <section class="Banner-principal">
             <article class="contenido-principal">
@@ -58,11 +64,11 @@
 
 
 
-    <div class="container">
-        <div class="left">
+    <div class="container_info">
+        <div class="left from-left">
         <h2>¿Te gustaría disfrutar de una experiencia única rodeado de naturaleza?</h2>
         <p>¡Te invitamos a nuestro Tour de Frutas de Altura en Alma 5, ubicado en Río Blanco, Copey de Dota!</p>
-        <p>Conoce nuestra familia emprendedora que con pasión y dedicación produce algunas de las frutas más frescas y deliciosas de la región. A través de este tour, tendrás la oportunidad de disfrutar frutas de altísima calidad en la frescura de las montañas, como la Manzana Anna, pepino, ciruela y mucho más.</p>
+        <p>Conoce nuestra familia emprendedora que con pasión y dedicación produce algunas de las frutas más frescas y deliciosas de la región. A través de este tour, tendrás la oportunidad de disfrutar frutas de altísima calidad en la frescura de las montañas, como la Manzana Anna, Moras, Aguacates, Ciruela y mucho más.</p>
         </div>
 
         <div class="right">
@@ -71,7 +77,7 @@
             <img src="imagenes/lading/niñatour.png" alt="Mora" class="berry-image">
         </div>
 
-        <div class="right-content">
+        <div class="right-content from-right">
             <h3>SE REQUIERE<br>CITA PREVIA</h3>
             <p>
             HORARIOS PARA<br>SEMANA SANTA<br>
@@ -89,34 +95,70 @@
 
 
 
-    <!-- galeria tour -->
 
 
 
-
-
-
-
-
-
-
-<section class="video-container">
-    <div class="video-header">
-        <h2 class="video-h2">Descubre un adelanto de lo que vivirás en nuestro tour</h2>
-        <p class="video-p">
-            Este video te mostrará un poco de la experiencia que te espera: naturaleza vibrante, frutas frescas y momentos inolvidables 
-            en las montañas de Copey de Dota. ¡Dale play y empieza a soñar con tu próxima aventura!
-        </p>
+<h2 class="titulo_galeria">Visita Nuestra Galería De Fotos</h2>
+<div class="container">
+    <div class="grid">
+        <div class="column move-down">
+            <img class="fotos_galeria" src="imagenes/lading/albaro.jpg" alt="Imagen 1">
+            <img class="fotos_galeria" src="imagenes/lading/tour.JPG" alt="Imagen 2">
+            <img class="fotos_galeria" src="imagenes/tour/imagen1.png" alt="Imagen 3">
+            <img class="fotos_galeria" src="imagenes/lading/cafeteria1.png" alt="Imagen 4">
+            <img class="fotos_galeria" src="imagenes/lading/niñatour.png" alt="Imagen 5">
+            <img class="fotos_galeria" src="imagenes/lading/IMG_9346.jpeg" alt="Imagen 6">
+            <img class="fotos_galeria" src="imagenes/lading/IMG_9345.jpeg" alt="Imagen 7">
+            <img class="fotos_galeria" src="imagenes/lading/bannertour.png" alt="Imagen 8">
+            <img class="fotos_galeria" src="imagenes/lading/albaro.jpg" alt="Imagen 9">
+        </div>
+        <div class="column move-up">
+            <img class="fotos_galeria" src="imagenes/lading/tour.JPG" alt="Imagen 10">
+            <img class="fotos_galeria" src="imagenes/tour/imagen1.png" alt="Imagen 11">
+            <img class="fotos_galeria" src="imagenes/lading/cafeteria1.png" alt="Imagen 12">
+            <img class="fotos_galeria" src="imagenes/lading/niñatour.png" alt="Imagen 13">
+            <img class="fotos_galeria" src="imagenes/lading/IMG_9346.jpeg" alt="Imagen 14">
+            <img class="fotos_galeria" src="imagenes/lading/IMG_9345.jpeg" alt="Imagen 15">
+            <img class="fotos_galeria" src="imagenes/lading/bannertour.png" alt="Imagen 16">
+            <img class="fotos_galeria" src="imagenes/lading/cafeteria1.png" alt="Imagen 17">
+            <img class="fotos_galeria" src="imagenes/lading/niñatour.png" alt="Imagen 18">
+        </div>
+        <div class="column move-down">
+            <img class="fotos_galeria" src="imagenes/lading/albaro.jpg" alt="Imagen 1">
+            <img class="fotos_galeria" src="imagenes/lading/tour.JPG" alt="Imagen 2">
+            <img class="fotos_galeria" src="imagenes/tour/imagen1.png" alt="Imagen 3">
+            <img class="fotos_galeria" src="imagenes/lading/cafeteria1.png" alt="Imagen 4">
+            <img class="fotos_galeria" src="imagenes/lading/niñatour.png" alt="Imagen 5">
+            <img class="fotos_galeria" src="imagenes/lading/IMG_9346.jpeg" alt="Imagen 6">
+            <img class="fotos_galeria" src="imagenes/lading/IMG_9345.jpeg" alt="Imagen 7">
+            <img class="fotos_galeria" src="imagenes/lading/bannertour.png" alt="Imagen 8">
+            <img class="fotos_galeria" src="imagenes/lading/albaro.jpg" alt="Imagen 9">
+        </div>
+        <div class="column move-up">
+            <img class="fotos_galeria" src="imagenes/lading/tour.JPG" alt="Imagen 10">
+            <img class="fotos_galeria" src="imagenes/tour/imagen1.png" alt="Imagen 11">
+            <img class="fotos_galeria" src="imagenes/lading/cafeteria1.png" alt="Imagen 12">
+            <img class="fotos_galeria" src="imagenes/lading/niñatour.png" alt="Imagen 13">
+            <img class="fotos_galeria" src="imagenes/lading/IMG_9346.jpeg" alt="Imagen 14">
+            <img class="fotos_galeria" src="imagenes/lading/IMG_9345.jpeg" alt="Imagen 15">
+            <img class="fotos_galeria" src="imagenes/lading/bannertour.png" alt="Imagen 16">
+            <img class="fotos_galeria" src="imagenes/lading/cafeteria1.png" alt="Imagen 17">
+            <img class="fotos_galeria" src="imagenes/lading/niñatour.png" alt="Imagen 18">
+        </div>
     </div>
+</div>
 
-    <iframe 
-        src="https://www.youtube.com/embed/GFQHDkrNtdE?autoplay=1&mute=1&loop=1&playlist=GFQHDkrNtdE"
-        title="YouTube video player" 
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-    </iframe>
-</section>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -134,8 +176,8 @@
             </div>
             <div class="footer-nav">
                 <a href="productos.html">Productos</a>
-                <a href="#">Cafetería</a>
-                <a href="#">Tour</a>
+                <a href="cafeteria.html">Cafetería</a>
+                <a href="tour.html">Tour</a>
                 <a href="#">Sobre Nosotros</a>
                 
             </div>
@@ -143,15 +185,17 @@
                 <a href="https://wa.me/50688853533?text=Hola%2C%20quiero%20más%20información%20sobre%20tus%20productos"target="_blank"><i class="fab fa-whatsapp"></i></a>
                 <a href="https://www.instagram.com/delacolinacr/"target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.facebook.com/delacolinacr/"target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="tel:+50688853533" target="_blank"><i class="fas fa-phone-alt"></i></a>
             </div>
             </div>
             <div class="footer-bottom">
-            <p>Copyright © 2025 De La Colina.CR</p>
+            <p>Todos Los Derechos © 2025 De La Colina.CR</p>
             <p>Diseñado y Programado Por Kendall.P</p>
             </div>
         </div>
     </footer>
 
     <script src="scripts/index.js"></script>
+    <script src="scripts/tour.js"></script>
     </body>
 </html>
